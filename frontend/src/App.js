@@ -1,7 +1,10 @@
+import React from "react";
+import HeroSection from "./component/heroSection/heroSection";
+
 function App() {
   return (
     <div className="App">
-      <p>Hello</p>
+      <HeroSection />
     </div>
   );
 }
