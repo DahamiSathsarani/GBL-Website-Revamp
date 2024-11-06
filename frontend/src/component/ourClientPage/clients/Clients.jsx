@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import bakersBlendLogo from '../../../assests/images/client-logos/bakersblend_logo.jpg';
-import icelandRideLogo from '../../../assests/images/client-logos/icelandride_logo.jpg';
+import bakersBlendLogo from '../../../assets/images/client-logos/bakersblend_logo.jpg';
+import icelandRideLogo from '../../../assets/images/client-logos/icelandride_logo.jpg';
 
 const Clients = () => {
     const [currentIndex, setCurrentIndex ] = useState(0);
