@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"], 
-      },
-      backgroundImage: theme => ({
-        'success-stories': "url('./assets/images/Background Picture.jpg')",
-      }),
+        sans: ["Inter", "sans-serif"], // Set Inter as the default sans font
+        poppins: ['Poppins', 'sans-serif'],      },
+        backgroundImage: theme => ({
+          'success-stories': "url('./assets/images/Background Picture.jpg')",
+        }),
     },
   },
   plugins: [],
