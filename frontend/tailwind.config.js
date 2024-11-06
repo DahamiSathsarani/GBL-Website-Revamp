@@ -4,7 +4,11 @@ module.exports = {
     "./public/index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Set Inter as the default sans font
+      },
+    },
   },
   plugins: [],
 };
