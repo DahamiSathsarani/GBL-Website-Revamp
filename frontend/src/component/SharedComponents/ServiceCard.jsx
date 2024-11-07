@@ -1,8 +1,13 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const ServiceCard = ({ title, icon, items }) => {
     return (
-        <div className="flex flex-col justify-center items-center h-[450px] lg:h-[500px] text-white">
+        <motion.div 
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="flex flex-col justify-center items-center h-[450px] lg:h-[500px] text-white">
             <div className='w-[100px] h-[100px] rounded-full mb-4'>
                 <img src={icon} alt={`${title} Icon`} className="rounded-full" />
             </div>
@@ -11,6 +16,7 @@ const ServiceCard = ({ title, icon, items }) => {
                     {title}
                 </h3>
                 <ul className="text-[12px] sm:text-sm space-y-[8px] w-full font-semibold">
+                    
                     {items.map((item, index) => (
                         <li key={index} className="flex justify-center">
                             <span>{item}</span>
@@ -18,7 +24,7 @@ const ServiceCard = ({ title, icon, items }) => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
