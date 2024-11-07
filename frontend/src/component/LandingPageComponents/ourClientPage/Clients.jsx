@@ -35,12 +35,10 @@ const Clients = () => {
     }, [handleNext]);
 
     return (
-        <div>
-            {/* Full-width background section */}
-            <div className="relative w-full h-auto text-white p-6">
-                {/* SVG Background */}
+        <div className="h-screen flex flex-col">
+            <div className="flex-1 h-[15%] text-white flex items-center justify-center relative">
                 <svg
-                    className="absolute inset-0 w-full h-full transform rotate-180"
+                    className="absolute inset-0 transform rotate-180"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
                     fill="none"
@@ -59,7 +57,7 @@ const Clients = () => {
                 <h2 className="text-center text-3xl font-semibold mb-6 relative z-10">Our Clients</h2>
             </div>
 
-            <div className="">
+            <div className="flex-2 h-[25%] flex items-center justify-center relative">
                 <div className="relative flex justify-center items-center overflow-hidden w-full">
                     <button
                         onClick={handlePrev}
@@ -70,7 +68,6 @@ const Clients = () => {
                         </svg>
                     </button>
 
-                    {/* Display 5 logos with the center one highlighted */}
                     <motion.div
                         className="flex space-x-20"
                         key={currentIndex}
@@ -121,26 +118,44 @@ const Clients = () => {
                 </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-500 to-teal-400 text-white p-8 rounded-md">
-                <div className="mt-8 flex justify-around text-center">
+            <div className="flex-3 h-[35%] text-white flex items-center justify-center relative">
+                <svg
+                    className="absolute inset-0 transform -z-10"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1440 320"
+                    fill="none"
+                >
+                    <path
+                    fill="url(#gradient)"
+                    d="M0,160C0,160 360,0 720,0C1080,0 1440,160 1440,160L1440,320L0,320Z"
+                    />
+                    <defs>
+                    <linearGradient id="gradient" x1="0" x2="1" y1="0" y2="1">
+                        <stop offset="0%" stopColor="#85BFB7" />
+                        <stop offset="100%" stopColor="#1C3A7B" />
+                    </linearGradient>
+                    </defs>
+                </svg>
+
+                <div className="mt-8 flex justify-around text-center z-10">
                     <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
-                        <span className="text-4xl">2+</span>
-                        <p>Team Member</p>
+                    <span className="text-4xl">2+</span>
+                    <p>Team Member</p>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
-                        <span className="text-4xl">2+</span>
-                        <p>Complete Projects</p>
+                    <span className="text-4xl">2+</span>
+                    <p>Complete Projects</p>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
-                        <span className="text-4xl">1+</span>
-                        <p>Winning Award</p>
+                    <span className="text-4xl">1+</span>
+                    <p>Winning Award</p>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center">
-                        <span className="text-4xl">2+</span>
-                        <p>Client Review</p>
+                    <span className="text-4xl">2+</span>
+                    <p>Client Review</p>
                     </motion.div>
                 </div>
-            </div>
+                </div>
         </div>
     );
 };
