@@ -1,4 +1,5 @@
 import { images } from "../assets/images/assestsImages";
+import { gifs } from "../assets/Gifs/assetsGifs";
 
 export const servicesData = [
     {
@@ -13,6 +14,15 @@ export const servicesData = [
             "AI Development & Automation",
             "Data Science",
         ],
+        itemsIcons: [
+            gifs.Service1Icon1,
+            gifs.Service1Icon2,
+            gifs.Service1Icon3,
+            gifs.Service1Icon4,
+            gifs.Service1Icon5,
+            gifs.Service1Icon6,
+            gifs.Service1Icon7
+        ]
     },
     {
         title: "BPO / KPO",
@@ -25,6 +35,14 @@ export const servicesData = [
             "Financial Consultants",
             "Business Operations (Management Consulting)",
         ],
+        itemsIcons: [
+            gifs.Service2Icon1,
+            gifs.Service2Icon2,
+            gifs.Service2Icon3,
+            gifs.Service2Icon4,
+            gifs.Service2Icon5,
+            gifs.Service2Icon6,
+        ]
     },
     {
         title: "IT Infrastructure",
@@ -39,6 +57,16 @@ export const servicesData = [
             "Storage Infrastructure",
             "High Availability & Contingency Planning",
         ],
+        itemsIcons: [
+            gifs.Service3Icon1,
+            gifs.Service3Icon2,
+            gifs.Service3Icon3,
+            gifs.Service3Icon4,
+            gifs.Service3Icon5,
+            gifs.Service3Icon6,
+            gifs.Service3Icon7,
+            gifs.Service3Icon8,
+        ]
     },
     {
         title: "Digital Marketing",
@@ -53,5 +81,15 @@ export const servicesData = [
             "Graphic Designing",
             "Videography",
         ],
+        itemsIcons: [
+            gifs.Service4Icon1,
+            gifs.Service4Icon2,
+            gifs.Service4Icon3,
+            gifs.Service4Icon4,
+            gifs.Service4Icon5,
+            gifs.Service4Icon6,
+            gifs.Service4Icon7,
+            gifs.Service4Icon8,
+        ]
     },
 ];
