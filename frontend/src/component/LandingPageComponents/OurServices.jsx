@@ -29,6 +29,7 @@ const OurServices = () => {
                         title={service.title}
                         icon={service.icon}
                         items={service.items}
+                        itemsIcons={service.itemsIcons}
                     />
                 </div>
             ))}
@@ -41,6 +42,7 @@ const OurServices = () => {
                         title={service.title}
                         icon={service.icon}
                         items={service.items}
+                        itemsIcons={service.itemsIcons}
                     />
                 ))}
             </Carousel>
