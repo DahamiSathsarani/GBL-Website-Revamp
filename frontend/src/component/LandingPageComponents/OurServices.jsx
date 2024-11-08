@@ -9,7 +9,7 @@ const OurServices = () => {
   return (
     <section className='w-[100%] h-screen bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] flex justify-center items-center'>
         <div className="absolute top-0 left-0 w-full h-[150px] lg:h-[250px] z-0">
-            <img className='w-[100%] h-[100%]'
+            <img className='w-[100%] h-[100%] lg:h-[80%] xl:h-[90%]'
                 src={images.ShapeImage} 
                 alt="Shape-Image"
             />
@@ -21,10 +21,10 @@ const OurServices = () => {
             {servicesData.map((service, index) => (
                 <div 
                     key={index} 
-                    className={`relative ${index === 0 ? 'xl:mt-[4rem]' : ''} 
-                                ${index === 1 ? 'xl:mt-[8rem]' : ''} 
-                                ${index === 2 ? 'xl:mt-[8rem]' : ''} 
-                                ${index === 3 ? 'xl:mt-[4rem]' : ''}`}>
+                    className={`relative ${index === 0 ? 'lg:mt-[1rem] xl:mt-[2rem]' : ''} 
+                                ${index === 1 ? 'lg:mt-[4rem] xl:mt-[6rem]' : ''} 
+                                ${index === 2 ? 'lg:mt-[4rem] xl:mt-[6rem]' : ''} 
+                                ${index === 3 ? 'lg:mt-[1rem] xl:mt-[2rem]' : ''}`}>
                     <ServiceCard
                         title={service.title}
                         icon={service.icon}
