@@ -1,4 +1,5 @@
 import HeroPicture from './Hero Picture.png'
+import HeroPictureMobileView from './Hero Picture Mobile .png'
 import BackgroundImage from './Background Picture.jpg'
 import DirectorImage from './Director Picture.jpg'
 import GBLLogo from "./GBL Logo.png";
@@ -22,6 +23,7 @@ import Partner4Image from './partners-logos/Partners4.png'
 
 export const images = {
     HeroPicture,
+    HeroPictureMobileView,
     GBLLogo,
     BackgroundImage,
     DirectorImage,

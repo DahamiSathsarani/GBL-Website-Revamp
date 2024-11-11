@@ -20,7 +20,7 @@ export default function NavBar(){
      }
    
     return(
-        <section>
+        <section className="absolute w-full z-50">
         <div className="flex items-center justify-between h-[5rem] lg:h-[6rem] bg-[#ffffff] shadow-2xl mx-[10%] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[12rem] rounded-[35px] px-[2rem] lg:px-[2rem] xl:px-[3rem] mt-10 ">
             <a href="/"><img className='h-[3rem] sm:h-[3.5rem]  md:h-[4rem] xl:h-[5rem] xl:w-auto' src={images.GBLLogo} alt="GBL logo" /></a>
             <ul className="hidden  lg:flex lg:w-[55%]  xl:w-[50%] justify-between font-poppins font-bold lg:text-[16px] xl:text-[18px] items-center h-[6rem]">{navbarItems.map((item)=>
@@ -29,7 +29,7 @@ export default function NavBar(){
             <ul className="lg:w-[9.5rem] xl:w-[12rem] hidden group-hover:inline-flex lg:text-[14px] xl:text-[16px] flex-col absolute bg-[#f2f2f2] shadow lg:ml-[-25px] xl:ml-[-40px] lg:px-2 lg:py-2 xl:px-4 xl:py-3  rounded" key={item.name}>{item.items.map((subItem)=>
             <a className="inline-flex self-center hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear mb-2 " href={subItem.Link} key={subItem.name}>{subItem.name}</a>)}</ul></li>)
             )}</ul>
-            <button className='hidden lg:flex font-sans font-bold text-[#ffffff] lg:text-[14px] xl:text-[16px] bg-gradient lg:h-[3rem] xl:h-[4rem] lg:w-[12rem] xl:w-[15rem]  items-center justify-center rounded-[20px] hover:text-gradient hover:border-4 hover:border-[#008A7D] hover:transition-all hover:duration-300 hover:ease-linear '>Book a Free Consultation</button>
+            <button className='hidden lg:flex font-sans font-bold text-[#ffffff] lg:text-[14px] xl:text-[16px] bg-gradient lg:h-[3rem] xl:h-[3.5rem] lg:w-[12rem] xl:w-[15rem]  items-center justify-center rounded-[20px] hover:text-gradient hover:border-4 hover:border-[#008A7D] hover:transition-all hover:duration-300 hover:ease-linear '>Book a Free Consultation</button>
             <FaBars className="text-[30px] sm:text-[33px] md:text-[36px] text-[#00B09C] lg:hidden cursor-pointer" onClick={clickingTheMenuBar}/>
            <div className={`${
     isClickedOnMenuBar ? "translate-x-0" : "translate-x-full"
