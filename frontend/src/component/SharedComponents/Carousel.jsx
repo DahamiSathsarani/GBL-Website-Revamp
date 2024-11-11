@@ -9,26 +9,31 @@ const Carousel = ({ children }) => {
     const next = () => setCurr((currentIndex) => (currentIndex === totalSlides - 1 ? 0 : currentIndex + 1));
 
     return (
-        <section>
-            <div className='overflow-hidden relative'>
-                <div className='flex transition-transform ease-out duration-500'
-                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                    {React.Children.map(children, (child, index) => (
-                        <div className="w-full flex-shrink-0" key={index}>
-                            {child}
-                        </div>
-                    ))}
+        <section className="relative">
+            <div className='relative z-20 flex items-center justify-center'>
+                <div className=''>
+                    <button onClick={prev} className='p-1 text-gray-500 bg-white rounded-full shadow hover:text-gray-800'>
+                        <ChevronLeft />
+                    </button>
+                </div>
+                <div className='relative overflow-hidden w-[50%]'>
+                    <div className='flex transition-transform duration-500 ease-out'
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                        {React.Children.map(children, (child, index) => (
+                            <div className="flex-shrink-0 w-full" key={index}>
+                                {child}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className=''>
+                    <button onClick={next} className='p-1 text-gray-500 bg-white rounded-full shadow hover:text-gray-800'>
+                        <ChevronRight />
+                    </button>
                 </div>
             </div>
-            <div className='absolute inset-0 flex items-center justify-between p-4'>
-                <button onClick={prev} className='p-1 rounded-full shadow bg-white text-gray-500 hover:text-gray-800'>
-                    <ChevronLeft />
-                </button>
-                <button onClick={next} className='p-1 rounded-full shadow bg-white text-gray-500 hover:text-gray-800'>
-                    <ChevronRight />
-                </button>
-            </div>
-            <div className='mt-4 right-0 left-0'>
+
+            <div className='relative left-0 right-0 z-30'>
                 <div className='flex items-center justify-center gap-2'>
                     {Array.from({ length: totalSlides }).map((_, i) => (
                         <div key={i} className={`transition-all w-3 h-3 rounded-full bg-white
