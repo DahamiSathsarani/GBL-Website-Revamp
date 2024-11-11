@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { images } from "../../assets/images/assestsImages";
-import { IoIosArrowDropdown } from "react-icons/io";
 import { IoIosArrowDropleft } from "react-icons/io";
 export default function NavBar(){
     const navbarItems = [{name:"Company", url:"/",type:"Dropdown",items:[{name:"About Us",Link:"/"},{name:"Leadership Team",Link:"/"},{name:"Career",Link:"/"}]},
