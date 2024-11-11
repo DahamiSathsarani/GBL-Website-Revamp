@@ -17,7 +17,7 @@ export default function Footer(){
             </div>)}
             </div>
             <div className="mx-10 sm:mx-16 lg:mx-20 xl:mx-28  border-t-[1px] border-[#3D52A0] py-6 xl:py-8 flex justify-between "> 
-                <img className="h-[3rem] sm:h-[4rem] xl:h-[5rem]" src={images.GBLLogo}></img>
+                <img className="h-[3rem] sm:h-[4rem] xl:h-[5rem]" src={images.GBLLogo} alt="gbl-logo"></img>
                 <p className="text-[#EDE8F5] text-[12px] lg:text-[16px] sm:text-[15px] ml-6 text-center h-[3rem] sm:h-[4rem] xl:h-[5rem] flex items-center">© Copyright 2024 Global Bridge Labs. All rights reserved. </p>
             </div>
         </section>
