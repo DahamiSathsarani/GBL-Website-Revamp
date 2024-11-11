@@ -33,9 +33,9 @@ const HeroSection = () => {
             <button class="px-6 py-2 mx-2 bg-gradient font-semibold text-[12px] text-white transition duration-600 rounded-[15px] shadow-md hover:bg-transparent md:py-3 md:px-8 lg:mx-0">
               Discover More
             </button>
-            <button class="bg-gradient font-semibold rounded-[15px] text-[12px] p-[3px] shadow-md md:p-[4px] lg:invisible">
-              <span class="flex w-full bg-white text-[#1C3A7B] rounded-[14px] px-5 py-1 md:py-2 md:px-7">
-                Discover More
+            <button class="bg-gradient font-semibold rounded-[15px] text-[10px] p-[3px] shadow-md md:p-[4px] md:ml-5 lg:invisible">
+              <span class="flex w-full bg-white text-[#1C3A7B] rounded-[14px] px-4 py-1 md:py-2 md:px-5">
+                Book a Free Consultation
               </span>
             </button>
         
