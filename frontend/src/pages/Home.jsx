@@ -10,7 +10,6 @@ export default function Home(){
         <MainLayout>
         <HeroSection/>
         <OurServices/>
-        <Clients/>
         </MainLayout>
     </div>)
     

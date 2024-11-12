@@ -7,9 +7,9 @@ import { images } from '../../assets/images/assestsImages'
 const OurServices = () => {
 
   return (
-    <section className='relative w-[100%] h-screen bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] flex justify-center items-center'>
-        <div className='relative w-full h-full flex flex-col items-center justify-center'>
-            <div className="absolute top-0 left-0 w-full h-[150px] lg:h-[250px] z-0">
+    <section className='mt-[4rem] w-[100%] h-screen bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] flex justify-center items-center'>
+        <div className=' w-full h-full flex flex-col items-center justify-center'>
+            <div className="  top-0 left-0 w-full h-[150px] lg:h-[250px] z-0">
                 <img className='w-[100%] h-[100%] lg:h-[80%] xl:h-[90%]'
                     src={images.ShapeImage} 
                     alt="Shape-Image"
