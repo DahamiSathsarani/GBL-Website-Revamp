@@ -21,8 +21,8 @@ export default function NavBar(){
    
     return(
         <section className="absolute w-full z-50">
-        <div className="flex items-center justify-between h-[5rem] lg:h-[6rem] bg-[#ffffff] shadow-2xl mx-[10%] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[12rem] rounded-[35px] px-[2rem] lg:px-[2rem] xl:px-[3rem] mt-10 ">
-            <a href="/"><img className='h-[3rem] sm:h-[3.5rem]  md:h-[4rem] xl:h-[5rem] xl:w-auto' src={images.GBLLogo} alt="GBL logo" /></a>
+        <div className="flex items-center justify-between h-[3.5rem] sm:h-[4.5rem] md:h-[5rem] lg:h-[6rem] bg-[#ffffff] shadow-2xl mx-[10%] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[8rem] rounded-[35px] px-[2rem] lg:px-[2rem] xl:px-[3rem] mt-5 lg:mt-10 ">
+            <a href="/"><img className='h-[2.5rem] sm:h-[3.5rem]  md:h-[4rem] xl:h-[5rem] xl:w-auto' src={images.GBLLogo} alt="GBL logo" /></a>
             <ul className="hidden  lg:flex lg:w-[55%]  xl:w-[50%] justify-between font-poppins font-bold lg:text-[16px] xl:text-[18px] items-center h-[6rem]">{navbarItems.map((item)=>
             item.type==="Link"?( <li className="group  " key={item.name}><a className=" hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear text-[#000000]  h-[2rem] items-center" href={item.url}>{item.name}</a></li>)
             :(<li className=' group' key={item.name} ><div className="flex cursor-pointer hover:text-gradient text-center hover:transition-all hover:duration-200 hover:ease-linear  h-[2rem] items-center" >{item.name}</div>

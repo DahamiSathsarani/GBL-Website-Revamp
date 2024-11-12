@@ -9,14 +9,10 @@ const Carousel = ({ children }) => {
     const next = () => setCurr((currentIndex) => (currentIndex === totalSlides - 1 ? 0 : currentIndex + 1));
 
     return (
-        <section className="relative">
-            <div className='relative z-20 flex items-center justify-center'>
-                <div className=''>
-                    <button onClick={prev} className='p-1 text-gray-500 bg-white rounded-full shadow hover:text-gray-800'>
-                        <ChevronLeft />
-                    </button>
-                </div>
-                <div className='relative overflow-hidden w-[50%]'>
+        <section className="w-[100vw]">
+            <div className=' z-20 flex items-center justify-center overflow-hidden w-full '>
+                
+                <div className=' overflow-hidden w-[100%]'>
                     <div className='flex transition-transform duration-500 ease-out'
                         style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {React.Children.map(children, (child, index) => (
@@ -26,15 +22,11 @@ const Carousel = ({ children }) => {
                         ))}
                     </div>
                 </div>
-                <div className=''>
-                    <button onClick={next} className='p-1 text-gray-500 bg-white rounded-full shadow hover:text-gray-800'>
-                        <ChevronRight />
-                    </button>
-                </div>
+                
             </div>
 
-            <div className='relative left-0 right-0 z-30'>
-                <div className='flex items-center justify-center gap-2'>
+            <div className=' left-0 right-0 z-30'>
+                <div className='flex items-center justify-center gap-2' >
                     {Array.from({ length: totalSlides }).map((_, i) => (
                         <div key={i} className={`transition-all w-3 h-3 rounded-full bg-white
                                                 ${currentIndex === i ? "p-2" : "bg-opacity-50"}`}>
