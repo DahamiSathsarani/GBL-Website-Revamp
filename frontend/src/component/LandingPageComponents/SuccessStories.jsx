@@ -7,16 +7,16 @@ const SuccessStories = () => {
     <section className="bg-success-stories w-full h-screen min-h-[600px] bg-cover bg-center">
       <div className="flex flex-col items-center justify-center h-full bg-[#1C3A7B] bg-opacity-50">
 
-          <div className='text-white font-bold text-3xl p-8'>
+          <div className='p-8 text-3xl font-bold text-white'>
             <h1>Success Stories</h1>
           </div>
 
           <motion.div 
               initial={{ x: "-70%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
+              whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
               className="w-[80%] text-white bg-white bg-opacity-[20%] rounded-[25px] md:w-[60%] xl:w-[40%]">
-                <h1 className="px-14 pt-5 text-5xl font-bold">"</h1>
+                <h1 className="pt-5 text-5xl font-bold px-14">"</h1>
                 <p className="text-center px-14 text-[13px] md:text-[16px]">
                   Working with GBL has been an absolute pleasure. Their team demonstrated exceptional expertise delivering a robust & 
                   scalable software solution that exceeded our expectations. Not only did they adhere to deadlines with precision, 

@@ -5,7 +5,7 @@ const ServiceCard = ({ title, icon, items, itemsIcons }) => {
     return (
         <motion.div 
             initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col justify-center items-center h-[520px] lg:h-[580px] text-white mt-[5rem] lg:mt-0">
             <div className='w-[100px] h-[100px] xl:w-[120px] xl:h-[120px] rounded-full mb-4'>

@@ -27,7 +27,7 @@ const Carousel = ({ children }) => {
                         <div
                             key={i}
                             onClick={() => setCurr(i)}
-                            className={`transition-all w-3 h-3 rounded-full bg-white 
+                            className={`transition-all w-3 h-3 rounded-full bg-white z-50
                                         ${currentIndex === i ? "p-2" : "bg-opacity-50 cursor-pointer"}`}
                         >
                         </div>

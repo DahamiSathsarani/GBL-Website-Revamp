@@ -23,7 +23,7 @@ const PartnerCard = ({ logo, hoverLogo, content }) => {
     return (
         <motion.div 
             initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col justify-center items-center w-full h-[400px]" >
             <div 

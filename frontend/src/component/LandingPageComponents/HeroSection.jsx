@@ -12,7 +12,7 @@ const HeroSection = () => {
             src={images.HeroPicture} 
             alt="Hero-Image"
             initial={{ x: "60%", y: "-60%", opacity: 0 }}
-            animate={{ x: 0, y: 0, opacity: 1 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             class="hidden lg:block  lg:w-[75%] xl:w-[80%] lg:h-auto lg:max-h-[100vh] lg:right-0  lg:absolute"
           />
@@ -20,7 +20,7 @@ const HeroSection = () => {
             src={images.HeroPictureMobileView} 
             alt="Hero-Image"
             initial={{ x: "60%", y: "-60%", opacity: 0 }}
-            animate={{ x: 0, y: 0, opacity: 1 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             class=" w-full lg:hidden"
           />
@@ -28,7 +28,7 @@ const HeroSection = () => {
       
         <motion.div 
           initial={{ x: "-50%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           class="container lg:relative mx-auto  py-5 lg:py-0 w-[100%]   text-center z-50   lg:ml-[4rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:top-[50vh] lg:w-[40%] xl:w-[35%] lg:text-left xl:top-[50vh] 2xl:top-[56%] ">
 
