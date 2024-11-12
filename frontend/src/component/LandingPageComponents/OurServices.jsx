@@ -1,6 +1,6 @@
 import React from 'react'
-import Carousel from '../SharedComponents/Carousel'
-import ServiceCard from '../SharedComponents/ServiceCard'
+import Carousel from '../sharedComponents/Carousel'
+import ServiceCard from '../sharedComponents/ServiceCard'
 import {servicesData} from '../../data/servicesData'
 import { images } from '../../assets/images/assestsImages'
 
