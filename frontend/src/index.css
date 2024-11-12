@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .bg-gradient {
+      @apply bg-gradient-to-r from-[#00CEB1] to-[#1C3A7B];
+    }
+
+    .text-gradient {
+        @apply bg-gradient-to-b from-[#00CEB1] to-[#1C3A7B] bg-clip-text text-transparent;
+      }
+  }
+
