@@ -1,6 +1,6 @@
 import React from 'react'
-import Carousel from '../sharedComponents/Carousel'
-import PartnerCard from '../sharedComponents/PartnerCard'
+import Carousel from '../SharedComponents/Carousel'
+import PartnerCard from '../SharedComponents/PartnerCard'
 import {partnersData} from '../../data/partnersData'
 import { images } from '../../assets/images/assestsImages'
 
