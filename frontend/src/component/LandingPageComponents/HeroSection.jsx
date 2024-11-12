@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
 
   return (
-    <section class="font-sans bg-white  mb-10 md:mb-40 relative">
-      <div className=' top-0  h-[100%] sm:h-[100vh]'>
+    <section class="font-sans bg-white mb-10 relative">
+      <div className=' top-0  h-[100%] lg:h-[100vh]'>
         <div class=" w-[100%] lg:w-[80%]   ">
           <motion.img
             src={images.HeroPicture} 
@@ -30,12 +30,12 @@ const HeroSection = () => {
           initial={{ x: "-50%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          class="container lg:relative mx-auto  py-5 lg:py-0 w-[100%]   text-center z-50   lg:ml-[4rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:top-[50vh] lg:w-[40%] xl:w-[35%] lg:text-left xl:top-[50vh] 2xl:top-[60%] ">
+          class="container lg:relative mx-auto  py-5 lg:py-0 w-[100%]   text-center z-50   lg:ml-[4rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:top-[50vh] lg:w-[40%] xl:w-[35%] lg:text-left xl:top-[50vh] 2xl:top-[56%] ">
 
-            <h1 class="mb-6 text-[28px] text-gradient font-bold sm:text-4xl md:text-4xl lg:text-[2.5rem]  xl:text-5xl mx-6 sm:mx-10 ">
+            <h1 class="mb-6 text-[28px] text-gradient font-bold sm:text-4xl md:text-4xl lg:text-[2.5rem]  xl:text-5xl mx-6 sm:mx-10 2xl:text-[40px]">
               Unleashing <br></br> Innovation Through <br></br> Lines of Code
             </h1>
-            <p class="mb-6 text-[15px] sm:text-[17px] md:text-[18px] text-[#7A7878]  lg:w-[80%] mx-6 sm:mx-10">
+            <p class="mb-6 text-[15px] sm:text-[17px] md:text-[18px] text-[#7A7878]  lg:w-[80%] mx-6 sm:mx-10 2xl:w-[100%]">
               We use the power of technology to push the boundaries in our digital age.
             </p>
             <div className='flex flex-col  h-[6rem] sm:h-[9rem] lg:h-auto justify-between mx-6 sm:mx-10'>

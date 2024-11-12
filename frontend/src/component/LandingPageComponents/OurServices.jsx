@@ -7,9 +7,9 @@ import { images } from '../../assets/images/assestsImages'
 const OurServices = () => {
 
   return (
-    <section className='mt-[4rem] w-[100%] h-screen bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] flex justify-center items-center'>
-        <div className='flex flex-col items-center justify-center w-full h-full '>
-            <div className="  top-0 left-0 w-full h-[150px] lg:h-[250px] z-0">
+    <section className='w-[100%] h-[100%] bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] flex justify-center items-center'>
+        <div className='relative flex flex-col items-center justify-center w-full h-full'>
+            <div className="absolute top-0 left-0 w-full h-[150px] lg:h-[250px] z-0">
                 <img className='w-[100%] h-[100%] lg:h-[80%] xl:h-[90%]'
                     src={images.ShapeImage} 
                     alt="Shape-Image"
@@ -22,10 +22,10 @@ const OurServices = () => {
                 {servicesData.map((service, index) => (
                     <div 
                         key={index} 
-                        className={`relative ${index === 0 ? 'lg:mt-[1rem] xl:mt-[2rem]' : ''} 
-                                    ${index === 1 ? 'lg:mt-[4rem] xl:mt-[6rem]' : ''} 
-                                    ${index === 2 ? 'lg:mt-[4rem] xl:mt-[6rem]' : ''} 
-                                    ${index === 3 ? 'lg:mt-[1rem] xl:mt-[2rem]' : ''}`}>
+                        className={`relative ${index === 0 ? 'lg:mt-[2.5rem] xl:mt-[2.5rem]' : ''} 
+                                    ${index === 1 ? 'lg:mt-[6rem] xl:mt-[6.5rem]' : ''} 
+                                    ${index === 2 ? 'lg:mt-[6rem] xl:mt-[6.5rem]' : ''} 
+                                    ${index === 3 ? 'lg:mt-[2.5rem] xl:mt-[2.5rem]' : ''}`}>
                         <ServiceCard
                             title={service.title}
                             icon={service.icon}
