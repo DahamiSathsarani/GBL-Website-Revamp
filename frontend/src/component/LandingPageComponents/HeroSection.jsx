@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
 
   return (
-    <section class="font-sans bg-white mb-10 relative">
+    <section class="font-sans bg-white mb-10 relative ">
       <div className=' top-0  h-[100%] lg:h-[100vh]'>
         <div class=" w-[100%] lg:w-[80%]   ">
           <motion.img
             src={images.HeroPicture} 
             alt="Hero-Image"
-            initial={{ x: "60%", y: "-60%", opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            initial={{  y: "-60%", opacity: 0,maxHeight: 0, scaleY: 0.2 }}
+            whileInView={{  y: 0, opacity: 1,maxHeight: "100%", scaleY: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             class="hidden lg:block  lg:w-[75%] xl:w-[80%] lg:h-auto lg:max-h-[100vh] lg:right-0  lg:absolute"
           />
           <motion.img
             src={images.HeroPictureMobileView} 
             alt="Hero-Image"
-            initial={{ x: "60%", y: "-60%", opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            initial={{  y: "-60%", opacity: 0,maxHeight: 0, scaleY: 0.2 }}
+            whileInView={{  y: 0, opacity: 1,maxHeight: "100%", scaleY: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             class=" w-full lg:hidden"
           />

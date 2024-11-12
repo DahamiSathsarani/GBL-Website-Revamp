@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from "framer-motion";
 
 const PartnerCard = ({ logo, hoverLogo, content }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -21,10 +20,7 @@ const PartnerCard = ({ logo, hoverLogo, content }) => {
     }, [isHovered]);
     
     return (
-        <motion.div 
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+        <div 
             className="flex flex-col justify-center items-center w-full h-[400px]" >
             <div 
                 className="rounded-full border-solid border-4 border-[#7091E6] mb-4 bg-white transition-all duration-700"
@@ -37,7 +33,7 @@ const PartnerCard = ({ logo, hoverLogo, content }) => {
                 <img src={isHovered ? hoverLogo : logo} alt={'Icon'} className="rounded-full" />
             </div>
             <div 
-                className='w-[70%] h-[60%] sm:w-[70%] lg:w-[90%] lg:h-[50%] xl:w-[75%] xl:h-[55%] flex items-center text-black italic font-sans bg-white rounded-xl text-center p-8 transition-all duration-700'
+                className='w-[70%] h-[60%] sm:w-[70%] lg:w-[90%] lg:h-[50%] xl:w-[75%] xl:h-[55%] flex items-center text-black italic font-sans border-solid border-[4px] border-white bg-white rounded-xl text-center p-8 transition-all duration-700 '
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 style={{
@@ -46,7 +42,7 @@ const PartnerCard = ({ logo, hoverLogo, content }) => {
                 }}>
                 <p className="text-[13px]"> {content} </p>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
