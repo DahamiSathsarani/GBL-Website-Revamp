@@ -19,6 +19,7 @@ import Partner1Image from './partners-logos/Partner1.png'
 import Partner2Image from './partners-logos/Partner2.png'
 import Partner3Image from './partners-logos/Partners3.png'
 import Partner4Image from './partners-logos/Partners4.png'
+import SubServicesCardBackground from './Sub Services Card Shape.png'
 
 
 export const images = {
@@ -43,4 +44,5 @@ export const images = {
     Partner2Image,
     Partner3Image,
     Partner4Image,
+    SubServicesCardBackground,
 }
