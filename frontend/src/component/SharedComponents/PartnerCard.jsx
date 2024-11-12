@@ -1,32 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
 const PartnerCard = ({ logo, hoverLogo, content }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [size, setSize] = useState({ width: '110px', height: '110px' });
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 1280) {
+                setSize(isHovered ? { width: '120px', height: '120px' } : { width: '110px', height: '110px' });
+            } else { 
+                setSize(isHovered ? { width: '135px', height: '135px' } : { width: '120px', height: '120px' });
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isHovered]);
     
     return (
         <motion.div 
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="flex flex-col justify-center items-center w-full h-[400px]"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)} >
+            className="flex flex-col justify-center items-center w-full h-[400px]" >
             <div 
-                className='rounded-full border-solid border-4 border-[#7091E6] mb-4 bg-white'
+                className="rounded-full border-solid border-4 border-[#7091E6] mb-4 bg-white transition-all duration-700"
                 style={{
-                    width: isHovered ? '140px' : '110px',
-                    height: isHovered ? '140px' : '110px'
-                }}>
+                    width: size.width,
+                    height: size.height
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)} >
                 <img src={isHovered ? hoverLogo : logo} alt={'Icon'} className="rounded-full" />
             </div>
             <div 
-                className='w-[90%] h-[60%] sm:w-[70%] lg:w-[90%] lg:h-[50%] xl:w-[75%] xl:h-[65%] flex items-center text-black italic font-sans bg-white rounded-xl text-center p-10'
+                className='w-[70%] h-[60%] sm:w-[70%] lg:w-[90%] lg:h-[50%] xl:w-[75%] xl:h-[55%] flex items-center text-black italic font-sans bg-white rounded-xl text-center p-8 transition-all duration-700'
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 style={{
                     border: isHovered ? '4px solid #7091E6' : 'none',
                     color: isHovered ? '#3D52A0' : 'black',
                 }}>
-                <p className={`text-[${isHovered ? '15px' : '14px'}] lg:text-[${isHovered ? '14px' : '12px'}] xl:text-[${isHovered ? '17px' : '16px'}]`}> {content} </p>
+                <p className="text-[13px]"> {content} </p>
             </div>
         </motion.div>
     );

@@ -5,7 +5,7 @@ export const partnersData = [
         logo: images.Partner1Image,
         hoverLogo: images.Partner1coloredImage,
         content: [
-            "The location marketing platform for multioutlet brands Manage location listings, reviews and online reputation seamlessly across all your locations. Engage with customers via chat & messaging. Ace Local SEO with Zceppa.",
+            "The location marketing platform for multioutlet brands Manage location listings, reviews and online reputation seamlessly across all your locations. Engage with customers via chat & messaging.",
         ],
     },
     {
