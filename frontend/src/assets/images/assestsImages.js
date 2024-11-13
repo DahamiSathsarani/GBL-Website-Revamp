@@ -22,7 +22,6 @@ import Partner4Image from './partners-logos/Partners4.png'
 import ClientsWave from './ClientsWave.png'
 import ClientsShape from './ClientsShape.png'
 
-
 export const images = {
     HeroPicture,
     HeroPictureMobileView,
