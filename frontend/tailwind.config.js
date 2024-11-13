@@ -15,6 +15,9 @@ module.exports = {
       textShadow: {
         'outline': '0 0 2px white',
       },
+      screens: {
+        'xs': {'max': '350px'}, // Custom breakpoint for max-width: 350px
+      },
     },
   },
   plugins: [require('tailwindcss-textshadow')],

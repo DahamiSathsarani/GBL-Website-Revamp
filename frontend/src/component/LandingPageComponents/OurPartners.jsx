@@ -7,7 +7,7 @@ import { images } from '../../assets/images/assestsImages'
 const OurPartners = () => {
   return (
     <div>
-        <section className='w-[100%] h-screen flex justify-center items-center overflow-x-hidden'>
+        <section className='w-[100%] h-screen flex justify-center items-center'>
             <div className='relative flex flex-col items-center justify-center w-full h-screen'>
                 <div className="absolute top-0 left-0 w-full h-[30%] overflow-hidden">
                     <img className='w-[100%] h-[100%]'
@@ -19,7 +19,7 @@ const OurPartners = () => {
                     </div>
                 </div>
                 <div className="absolute bottom-0 left-0 w-full h-[90%]">
-                    <img className='hidden lg:block w-[100%] h-[100vh]'
+                    <img className='hidden lg:block w-[100%] h-[100%]'
                         src={images.PartnersBackground} 
                         alt="Shape-Image"
                     />
@@ -33,10 +33,11 @@ const OurPartners = () => {
                     {partnersData.map((partner, index) => (
                         <div 
                             key={index}
-                            className={`relative ${index === 0 ? 'lg:mt-[4rem] xl:mt-[4rem]' : ''} 
-                                    ${index === 1 ? 'lg:mt-[2.5rem] xl:mt-[3rem]' : ''} 
-                                    ${index === 2 ? 'lg:mt-[1rem] xl:mt-[2rem]' : ''} 
-                                    ${index === 3 ? 'lg:mt-[-0.5rem] xl:mt-[0.5rem]' : ''}`} >
+                            className={`relative 
+                                    ${index === 0 ? 'lg:mt-[4rem] xl:mt-[4rem] 2xl:mt-[6rem]' : ''} 
+                                    ${index === 1 ? 'lg:mt-[2.5rem] xl:mt-[3rem] 2xl:mt-[5rem]' : ''} 
+                                    ${index === 2 ? 'lg:mt-[1rem] xl:mt-[2rem] 2xl:mt-[3rem]' : ''} 
+                                    ${index === 3 ? 'lg:mt-[-0.5rem] xl:mt-[0.5rem] 2xl:mt-[0rem]' : ''}`} >
                             <PartnerCard
                                 logo={partner.logo}
                                 hoverLogo={partner.hoverLogo}
