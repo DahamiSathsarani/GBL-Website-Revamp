@@ -33,14 +33,14 @@ const PartnerCard = ({ logo, hoverLogo, content }) => {
                 <img src={isHovered ? hoverLogo : logo} alt={'Icon'} className="rounded-full" />
             </div>
             <div 
-                className='w-[70%] h-[60%] sm:w-[70%] lg:w-[90%] lg:h-[50%] xl:w-[75%] xl:h-[55%] flex items-center text-black italic font-sans border-solid border-[4px] border-white bg-white rounded-xl text-center p-8 transition-all duration-700 '
+                className='w-[70%] h-[60%] sm:w-[70%] md:w-[50%] lg:w-[90%] lg:h-[50%] xl:w-[75%] xl:h-[55%] flex items-center text-black italic font-sans  bg-white rounded-xl text-center p-8 transition-all duration-700 '
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 style={{
-                    border: isHovered ? '4px solid #7091E6' : 'none',
+                    border: isHovered ? '4px solid #7091E6' : '4px solid #ffff',
                     color: isHovered ? '#3D52A0' : 'black',
                 }}>
-                <p className="text-[13px]"> {content} </p>
+                <p className="xs:text-[14px] text-[15px] sm:text-[17px] md:text-[20px] lg:text-[13px] 2xl:text-[15px]"> {content} </p>
             </div>
         </div>
     );
