@@ -7,9 +7,12 @@ const SuccessStories = () => {
     <section className="bg-success-stories w-full xs:h-[40rem] h-[40rem] sm:h-[45rem]  lg:h-[43rem]  2xl:h-[47rem] bg-cover bg-center">
       <div className=" h-full bg-[#1C3A7B] bg-opacity-50">
 
-          <div className='flex items-center justify-center p-8 text-3xl sm:text-5xl font-bold text-white h-[10rem] w-full'>
+          <motion.div className='flex items-center justify-center p-8 text-3xl sm:text-5xl font-bold text-white h-[10rem] w-full'
+         initial={{ x: "20%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: [0.42, 0, 0.58, 1] }}>
             <h1>Success Stories</h1>
-          </div>
+          </motion.div>
            <div className='xs:h-[25rem] h-[25rem] sm:h-[30rem] lg:h-[27rem] 2xl:h-[30rem] flex items-center justify-center'>
           <motion.div 
               initial={{ x: "-70%", opacity: 0 }}

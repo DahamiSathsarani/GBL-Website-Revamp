@@ -3,41 +3,49 @@ import Carousel from '../SharedComponents/Carousel'
 import PartnerCard from '../SharedComponents/PartnerCard'
 import {partnersData} from '../../data/partnersData'
 import { images } from '../../assets/images/assestsImages'
+import { motion } from 'framer-motion'
 
 const OurPartners = () => {
   return (
     <div>
-        <section className='w-[100%] h-screen flex justify-center items-center'>
-            <div className='relative flex flex-col items-center justify-center w-full h-screen'>
-                <div className="absolute top-0 left-0 w-full h-[30%] overflow-hidden">
-                    <img className='w-[100%] h-[100%]'
+        <section className='w-[100%] h-[44rem] xl:h-[50rem] flex justify-center items-center '>
+            <div className='relative flex flex-col items-center justify-center w-full h-[44rem] xl:h-[50rem]'>
+                <div className="absolute top-0 left-0 w-full h-[15rem] overflow-hidden">
+                    <img className='w-[100%] h-[100%] '
                         src={images.WaveImage} 
                         alt="Shape-Image"
                     />
-                    <div className='absolute top-[50px] w-[100%] ml-[90px] sm:ml-[140px] lg:ml-[150px] lg:top-[80px] xl:top-[70px] py-5'>
-                        <h1 className='text-2xl font-bold text-black sm:text-3xl'> Our <br></br> <span className='text-[#00CEB1] text-3xl sm:text-4xl'> Partners </span> </h1>
-                    </div>
+                    <motion.div className='absolute xs:top-[5rem] top-[8rem]   w-[100%] xs:ml-[40px] ml-[90px] sm:ml-[100px] md:ml-[150px] lg:ml-[250px]   py-5 h-[8rem]'  
+                    initial={{ y: "-50%", opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.2, ease: [0.42, 0, 0.58, 1] }}>
+                        <h1 className='text-2xl font-bold text-black sm:text-3xl xl:text-4xl'> Our <br></br> <span  className='text-[#00CEB1] text-4xl sm:text-4xl md:text-5xl xl:text-6xl' 
+                       > Partners </span> </h1>
+                    </motion.div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-full h-[90%]">
+                <div className="absolute bottom-0 left-0 w-full h-[33rem] xl:h-[44rem]">
                     <img className='hidden lg:block w-[100%] h-[100%]'
                         src={images.PartnersBackground} 
                         alt="Shape-Image"
                     />
-                    <img className='lg:hidden w-[100%] h-[100%]'
+                    <img className='lg:hidden w-[100%] h-[33rem] xl:h-[44rem]'
                         src={images.PartnersBackgroundSm} 
                         alt="Shape-Image"
                     />
                 </div>
                 
-                <div className="hidden mt-[120px] mx-[30px] lg:grid lg:grid-cols-4 z-10">
+                <motion.div className="hidden mt-[120px] mx-[30px] lg:grid lg:grid-cols-4 z-10" 
+                    initial={{ y: "15%", opacity: 0 }}
+                    whileInView={{ y: "0", opacity: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}>
                     {partnersData.map((partner, index) => (
                         <div 
                             key={index}
                             className={`relative 
-                                    ${index === 0 ? 'lg:mt-[4rem] xl:mt-[4rem] 2xl:mt-[6rem]' : ''} 
-                                    ${index === 1 ? 'lg:mt-[2.5rem] xl:mt-[3rem] 2xl:mt-[5rem]' : ''} 
-                                    ${index === 2 ? 'lg:mt-[1rem] xl:mt-[2rem] 2xl:mt-[3rem]' : ''} 
-                                    ${index === 3 ? 'lg:mt-[-0.5rem] xl:mt-[0.5rem] 2xl:mt-[0rem]' : ''}`} >
+                                    ${index === 0 ? 'lg:mt-[9rem] xl:mt-[5rem]'  : ''} 
+                                    ${index === 1 ? 'lg:mt-[11rem] xl:mt-[7rem]'   : ''} 
+                                    ${index === 2 ? 'lg:mt-[9rem] xl:mt-[4rem] ' : ''} 
+                                    ${index === 3 ? 'lg:mt-[5rem] xl:mt-[-1rem] ' : ''}`} >
                             <PartnerCard
                                 logo={partner.logo}
                                 hoverLogo={partner.hoverLogo}
@@ -45,8 +53,8 @@ const OurPartners = () => {
                             />
                         </div>
                     ))}
-                </div>
-                <div className="lg:hidden mt-[100px]">
+                </motion.div>
+                <div className="lg:hidden mt-[16rem]">
                     <Carousel>
                         {partnersData.map((partner, index) => (
                             <PartnerCard
