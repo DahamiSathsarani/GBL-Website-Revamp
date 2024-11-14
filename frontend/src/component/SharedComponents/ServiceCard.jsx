@@ -17,7 +17,7 @@ const ServiceCard = ({ title, icon, items, itemsIcons }) => {
                     <div className="flex flex-col  justify-between text-[13px] ml-[5%] sm:ml-[10%] md:ml-[15%] lg:ml-0 sm:text-sm h-[85%] xl:mx-2 2xl:ml-3  w-full font-semibold">
                         {itemsIcons.map((icon, index) => (
                             <div key={index} className="flex items-center space-x-2">
-                                <img src={icon} alt={`Icon ${index}`} className="w-7 h-7 mr-4" />
+                                <img src={icon} alt={`Icon ${index}`} className="w-7 h-7 2xl:w-9 2xl:h-9 mr-4" />
                                 <span className='pr-[5px] xl:pr-[10px]'>{items[index]}</span>
                             </div>
                         ))}
