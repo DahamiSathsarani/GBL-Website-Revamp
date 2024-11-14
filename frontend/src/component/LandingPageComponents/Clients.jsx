@@ -70,6 +70,59 @@ const Clients = () => {
   }, []);
 
   ////
+  const [count1, setCount1] = useState(1);
+
+  useEffect(() => {
+    if (count1 < 20) {
+      const interval = setInterval(() => {
+        setCount1((prevCount) => prevCount + 1);
+      }, 100); // Update every 100 milliseconds
+
+      return () => clearInterval(interval); // Cleanup the interval on unmount
+    }
+  }, [count1]);
+
+  ////
+  const [count2, setCount2] = useState(1);
+
+  useEffect(() => {
+    if (count2 < 60) {
+      const interval = setInterval(() => {
+        setCount2((prevCount) => prevCount + 1);
+      }, 30); // Update every 100 milliseconds
+
+      return () => clearInterval(interval); // Cleanup the interval on unmount
+    }
+  }, [count2]);
+  ////
+
+  ////
+  const [count3, setCount3] = useState(1);
+
+  useEffect(() => {
+    if (count3 < 5) {
+      const interval = setInterval(() => {
+        setCount3((prevCount) => prevCount + 1);
+      }, 700); // Update every 100 milliseconds
+
+      return () => clearInterval(interval); // Cleanup the interval on unmount
+    }
+  }, [count3]);
+  ////
+
+  ////
+  const [count4, setCount4] = useState(1);
+
+  useEffect(() => {
+    if (count4 < 200) {
+      const interval = setInterval(() => {
+        setCount4((prevCount) => prevCount + 1);
+      }, 10); // Update every 100 milliseconds
+
+      return () => clearInterval(interval); // Cleanup the interval on unmount
+    }
+  }, [count4]);
+  ////
 
   return (
     <section className="w-[100%] xs:h-[40rem] h-[43rem] sm:h-[44rem] lg:h-[48rem] xl:h-[50rem] flex justify-center items-center ">
@@ -159,7 +212,7 @@ const Clients = () => {
                     statUnit.place == "mid"
                       ? "xs:bottom-[10px] bottom-[60px] sm:bottom-[80px] md:bottom-[70px] xl:bottom-[90px] xs:mx-0 mx-[10px] "
                       : "xs:bottom-[-20px] bottom-[10px] md:bottom-[-10px] lg:bottom-0 xl:bottom-[20px]"
-                  } xs:flex-col md:flex relative  xs:w-20   items-center `}
+                  } xs:flex-col md:flex relative     items-center `}
                 >
                   <div className=" flex justify-center   items-center ">
                     <img
@@ -170,7 +223,16 @@ const Clients = () => {
                   </div>
                   <div className="xs:mt-1 mt-2  sm:mt-[5px] md:mt-0 md:ml-[0px] w-[3rem] flex flex-col items-left md:items-left md:justify-center md:h-[5rem]">
                     <span className="xs:text-xl text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold md:text-left">
-                      {statUnit.firstNumber}+
+                      {statUnit.id === 1
+                        ? count1
+                        : statUnit.id === 2
+                        ? count2
+                        : statUnit.id == 3
+                        ? count3
+                        : statUnit.id == 4
+                        ? count4
+                        : null}
+                      {""}+
                     </span>
                     <p className="xs:text-xs text-xs sm:text-sm md:text-xs md:text-left">
                       {statUnit.description}
