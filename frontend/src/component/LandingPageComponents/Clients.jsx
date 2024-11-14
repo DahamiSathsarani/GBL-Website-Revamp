@@ -68,6 +68,9 @@ const Clients = () => {
 
     return () => clearInterval(interval); // Clean up interval on component unmount
   }, []);
+
+  ////
+
   return (
     <section className="w-[100%] xs:h-[40rem] h-[43rem] sm:h-[44rem] lg:h-[48rem] xl:h-[50rem] flex justify-center items-center ">
       <div className="relative flex flex-col items-center justify-center w-full xs:h-[40rem] h-[43rem] sm:h-[44rem] lg:h-[48rem] xl:h-[50rem]">
@@ -112,7 +115,7 @@ const Clients = () => {
             <div className="relative flex justify-center h-[20rem] items-center overflow-hidden w-[100%]">
               <motion.div
                 className="flex space-x-10 flex-nowrap"
-                initial={{ x: "100%" }}
+                initial={{ x: "-26%" }}
                 animate={{
                   x: `-${clientLogoes.length * 15}rem`,
                 }}
@@ -127,12 +130,11 @@ const Clients = () => {
                   width: `${clientLogoes.length * 15}rem`,
                 }}
               >
-                {}
                 {[...clientLogoes, ...clientLogoes, ...clientLogoes].map(
                   (client, index) => (
                     <div
                       key={`${client.id}-${index}`}
-                      className="flex-shrink-0 shadow-[2px_4px_8px_rgba(0,0,0,0.15)]  xs:w-44 xs:h-32 w-56 h-36 lg:h-[11.5rem] lg:w-[22rem] rounded-lg p-4 bg-white flex justify-center items-center"
+                      className="flex-shrink-0 shadow-[2px_4px_8px_rgba(0,0,0,0.15)] xs:w-44 xs:h-32 w-56 h-36 lg:h-[11.5rem] lg:w-[22rem] rounded-lg p-4 bg-white flex justify-center items-center"
                     >
                       <div className="flex items-center justify-center xs:w-40 xs:h-24 sm:w-48 sm:h-30 h-28 w-44 lg:h-[9rem] lg:w-[18rem] bg-[#f2f2f2] border-[1px] border-[#00B09C] rounded-lg shadow-md">
                         <img
