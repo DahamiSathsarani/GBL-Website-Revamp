@@ -76,7 +76,7 @@ const Clients = () => {
     if (count1 < 20) {
       const interval = setInterval(() => {
         setCount1((prevCount) => prevCount + 1);
-      }, 100); // Update every 100 milliseconds
+      }, 300); // Update every 100 milliseconds
 
       return () => clearInterval(interval); // Cleanup the interval on unmount
     }
@@ -89,7 +89,7 @@ const Clients = () => {
     if (count2 < 60) {
       const interval = setInterval(() => {
         setCount2((prevCount) => prevCount + 1);
-      }, 30); // Update every 100 milliseconds
+      }, 100); // Update every 100 milliseconds
 
       return () => clearInterval(interval); // Cleanup the interval on unmount
     }
@@ -103,7 +103,7 @@ const Clients = () => {
     if (count3 < 5) {
       const interval = setInterval(() => {
         setCount3((prevCount) => prevCount + 1);
-      }, 700); // Update every 100 milliseconds
+      }, 1400); // Update every 100 milliseconds
 
       return () => clearInterval(interval); // Cleanup the interval on unmount
     }
@@ -117,7 +117,7 @@ const Clients = () => {
     if (count4 < 200) {
       const interval = setInterval(() => {
         setCount4((prevCount) => prevCount + 1);
-      }, 10); // Update every 100 milliseconds
+      }, 25); // Update every 100 milliseconds
 
       return () => clearInterval(interval); // Cleanup the interval on unmount
     }
