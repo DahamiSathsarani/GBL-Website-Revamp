@@ -5,7 +5,7 @@ import newStepFinanceLogo from "../../assets/images/client-logos/New step financ
 import icelandRideLogo from "../../assets/images/client-logos/Icelandride.png";
 import iamgoingLogo from "../../assets/images/client-logos/Iamgoing.png";
 import easycareLogo from "../../assets/images/client-logos/EastCare.png";
-import teamMemberIcon from "../../assets/images/stats-icons/Clients Reviews.svg";
+import teamMemberIcon from "../../assets/images/stats-icons/Team Members.svg";
 import winningAwardsIcons from "../../assets/images/stats-icons/Winning Awards.svg";
 import completeProjectsIcons from "../../assets/images/stats-icons/Complete Projects.svg";
 import clientsReviewsIcons from "../../assets/images/stats-icons/Clients Reviews.svg";
@@ -19,7 +19,40 @@ const Clients = () => {
     { id: 4, name: "iamgoing", logo: iamgoingLogo },
     { id: 5, name: "easycare", logo: easycareLogo },
   ];
-
+  const statDescription = [
+    {
+      id: 1,
+      picture: teamMemberIcon,
+      firstNumber: "1",
+      lastNumber: "5",
+      description: "Team Members",
+      place: "corner",
+    },
+    {
+      id: 2,
+      picture: completeProjectsIcons,
+      firstNumber: "1",
+      lastNumber: "5",
+      description: "Complete Projects",
+      place: "mid",
+    },
+    {
+      id: 3,
+      picture: winningAwardsIcons,
+      firstNumber: "1",
+      lastNumber: "5",
+      description: "Wining Awards",
+      place: "mid",
+    },
+    {
+      id: 4,
+      picture: clientsReviewsIcons,
+      firstNumber: "1",
+      lastNumber: "5",
+      description: "Client Reviews",
+      place: "corner",
+    },
+  ];
   const clientsCarousel = [...clientLogoes, ...clientLogoes];
   //
 
@@ -36,8 +69,8 @@ const Clients = () => {
     return () => clearInterval(interval); // Clean up interval on component unmount
   }, []);
   return (
-    <section className="w-[100%] xs:h-[40rem] h-[43rem] xl:h-[50rem] flex justify-center items-center ">
-      <div className="relative flex flex-col items-center justify-center w-full xs:h-[40rem] h-[43rem] xl:h-[50rem]">
+    <section className="w-[100%] xs:h-[40rem] h-[43rem] sm:h-[44rem] lg:h-[48rem] xl:h-[50rem] flex justify-center items-center ">
+      <div className="relative flex flex-col items-center justify-center w-full xs:h-[40rem] h-[43rem] sm:h-[44rem] lg:h-[48rem] xl:h-[50rem]">
         <div className="absolute top-0 left-0 w-full xs:h-[18rem] h-[15rem] overflow-hidden">
           <img
             className="w-[100%] h-[100%] "
@@ -45,7 +78,7 @@ const Clients = () => {
             alt="Client-Wave"
           />
           <motion.div
-            className="absolute  xs:top-[12rem] top-[9rem]   w-[100vw] xs:pl-[30px] pl-[40px] lg:ml-[250px]   py-5 h-[7rem] flex items-center "
+            className="absolute  xs:top-[12rem] top-[9rem]   w-[100vw] xs:pl-[30px] pl-[60px] ml-[30px] lg:ml-[60px]   py-5 h-[7rem] flex items-center "
             initial={{ y: "-50%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.42, 0, 0.58, 1] }}
@@ -61,25 +94,25 @@ const Clients = () => {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full xs:h-auto h-[14rem] xl:h-[44rem]">
+        <div className="absolute bottom-0 left-0 w-full xs:h-auto h-[14rem] sm:h-[15rem] xl:h-[16rem]">
           <img
             className="hidden lg:block w-[100%] h-[100%]"
             src={images.ClientsShape}
             alt="Clients-Background"
           />
           <img
-            className="lg:hidden w-[100%] xs:h-[10rem] h-[14rem] "
+            className="lg:hidden w-[100%] xs:h-[10rem] h-[14rem] sm:h-[15rem] "
             src={images.ClientsShape}
             alt="Clients-Background"
           />
         </div>
 
         {
-          <div className="lg:flex-2 h-[20rem] lg:flex items-center xs:top-[3.5rem] top-[1rem] justify-center relative overflow-hidden w-[100%] ">
-            <div className="relative flex justify-center h-[20rem] items-center overflow-hidden xs:w-[100%]">
+          <div className="lg:flex-2 h-[20rem] lg:flex items-center xs:top-[3.5rem] top-[1rem] sm:top-[-0.5rem] justify-center relative overflow-hidden w-[100%] ">
+            <div className="relative flex justify-center h-[20rem] items-center overflow-hidden w-[100%]">
               <motion.div
                 className="flex space-x-10 flex-nowrap"
-                initial={{ x: 0 }}
+                initial={{ x: "100%" }}
                 animate={{
                   x: `-${clientLogoes.length * 15}rem`,
                 }}
@@ -99,13 +132,13 @@ const Clients = () => {
                   (client, index) => (
                     <div
                       key={`${client.id}-${index}`}
-                      className="flex-shrink-0 shadow-[2px_4px_8px_rgba(0,0,0,0.15)]  xs:w-44 xs:h-32 w-56 h-36 rounded-lg p-4 bg-white flex justify-center items-center"
+                      className="flex-shrink-0 shadow-[2px_4px_8px_rgba(0,0,0,0.15)]  xs:w-44 xs:h-32 w-56 h-36 lg:h-[11.5rem] lg:w-[22rem] rounded-lg p-4 bg-white flex justify-center items-center"
                     >
-                      <div className="flex items-center justify-center xs:w-40 xs:h-24 sm:w-48 sm:h-30 h-28 w-44 bg-[#f2f2f2] border-[1px] border-[#00B09C] rounded-lg shadow-md">
+                      <div className="flex items-center justify-center xs:w-40 xs:h-24 sm:w-48 sm:h-30 h-28 w-44 lg:h-[9rem] lg:w-[18rem] bg-[#f2f2f2] border-[1px] border-[#00B09C] rounded-lg shadow-md">
                         <img
                           src={client.logo}
                           alt={client.name}
-                          className="sm:w-36 sm:h-30 xs:h-24 xs:w-40 h-28 w-44 object-contain"
+                          className="sm:w-36 sm:h-30 xs:h-24 xs:w-40 h-28 w-44 lg:h-[9rem] lg:w-[18rem] object-contain"
                         />
                       </div>
                     </div>
@@ -115,74 +148,34 @@ const Clients = () => {
             </div>
           </div>
         }
-
         {
-          <div className=" flex-3 h-[10rem] text-white xs:px-4 px-8 sm:px-16 md:px-32 absolute bottom-0 w-full">
-            <div className="mt-8 flex xs:justify-between justify-between text-center z-10 w-full">
-              <motion.div className="xs:flex-col sm:flex relative xs:bottom-[-20px] bottom-[18px]  xs:w-20  items-center">
-                <div className="w-ful flex justify-center sm:h-20 items-center ">
-                  <img
-                    src={teamMemberIcon}
-                    alt="team members"
-                    className="xs:h-8 h-12 sm:h-20"
-                  />
-                </div>
-                <div className="xs:mt-1 mt-3 sm:mt-0 sm:flex-col sm:h-20 items-center justify-center sm:ml-2 ">
-                  <span className="xs:text-xl text-2xl  font-bold">2+</span>
-                  <p className="xs:text-xs text-sm ">
-                    Team <br /> Members
-                  </p>
-                </div>
-              </motion.div>
-              <motion.div className=" xs:flex-col sm:flex  items-center xs:bottom-0 bottom-[60px] relative ml-2 xs:w-20">
-                <div className="w-ful flex justify-center">
-                  <img
-                    src={completeProjectsIcons}
-                    alt="complete projects"
-                    className="xs:h-8 h-12 "
-                  />
-                </div>
-                <div className="xs:mt-1 mt-3">
-                  <span className="xs:text-xl text-2xl  font-bold  ">2+</span>
-                  <p className="xs:text-xs text-sm ">
-                    Complete
-                    <br /> Projects
-                  </p>
-                </div>
-              </motion.div>
-              <motion.div className="xs:flex-col sm:flex  items-center xs:bottom-0 bottom-[60px] relative ml-2 w-20">
-                <div className="w-ful flex justify-center sm:h-20">
-                  <img
-                    src={winningAwardsIcons}
-                    alt="winning awards"
-                    className="xs:h-8 h-12 sm:h-20 "
-                  />
-                </div>
-                <div className="xs:mt-1 mt-3">
-                  <span className="xs:text-xl text-2xl font-bold">1+</span>
-                  <p className="xs:text-xs text-sm ">
-                    Winning
-                    <br />
-                    Award
-                  </p>
-                </div>
-              </motion.div>
-              <motion.div className="xs:flex-col sm:flex  items-center relative xs:bottom-[-20px] bottom-[18px]  w-20">
-                <div className="w-ful flex justify-center sm:h-20 ">
-                  <img
-                    src={clientsReviewsIcons}
-                    alt="client reviews"
-                    className="xs:h-8 h-12 sm:h-20"
-                  />
-                </div>
-                <div className="xs:mt-1 mt-3">
-                  <span className="xs:text-xl text-2xl font-bold">2+</span>
-                  <p className="xs:text-xs text-sm ">
-                    Client
-                    <br /> Review
-                  </p>
-                </div>
-              </motion.div>
+          <div className=" flex-3 h-[10rem] text-white xs:px-4 px-10 sm:px-16 md:px-20 lg:px-36 xl:px-[20%] absolute bottom-0 w-full">
+            <div className="mt-8 flex  justify-between  text-center z-10 w-full">
+              {statDescription.map((statUnit) => (
+                <motion.div
+                  className={`${
+                    statUnit.place == "mid"
+                      ? "xs:bottom-[10px] bottom-[60px] sm:bottom-[80px] md:bottom-[70px] xl:bottom-[90px] xs:mx-0 mx-[10px] "
+                      : "xs:bottom-[-20px] bottom-[10px] md:bottom-[-10px] lg:bottom-0 xl:bottom-[20px]"
+                  } xs:flex-col md:flex relative  xs:w-20   items-center `}
+                >
+                  <div className=" flex justify-center   items-center ">
+                    <img
+                      src={statUnit.picture}
+                      alt={statUnit.description}
+                      className="xs:h-8 h-[2.5rem] w-[2.5rem] sm:h-[3rem] sm:w-[3rem] md:h-[5rem] md:w-[8rem] lg:w-[6.5rem]"
+                    />
+                  </div>
+                  <div className="xs:mt-1 mt-2  sm:mt-[5px] md:mt-0 md:ml-[0px] w-[3rem] flex flex-col items-left md:items-left md:justify-center md:h-[5rem]">
+                    <span className="xs:text-xl text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold md:text-left">
+                      {statUnit.firstNumber}+
+                    </span>
+                    <p className="xs:text-xs text-xs sm:text-sm md:text-xs md:text-left">
+                      {statUnit.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         }
