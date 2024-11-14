@@ -11,13 +11,13 @@ const SubServicesSection = ({ serviceKey }) => {
     <section className='w-[100%] xs:h-[480px] h-[100vh] md:h-[100%] flex justify-center items-center bg-sub-services bg-cover bg-center'>
         <div className='w-full h-full flex flex-col items-center justify-center bg-[#1C3A7B] bg-opacity-50'>
 
-            <motion.div className="hidden gap-4 lg:grid lg:grid-cols-3 z-10"  
+            <motion.div className="z-10 hidden w-full gap-0 mx-auto xl:grid xl:grid-cols-3"
+                style={{ maxWidth: 'calc(100% - 80px)' }}  
                 initial={{ y: "15%", opacity: 0 }}
                 whileInView={{ y: "0", opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}>
                 {data.map((subService, index) => (
-                    <div 
-                        key={index}>
+                    <div key={index} className='flex items-center justify-center'>
                         <SubServiceCard
                             icon={subService.icon}
                             title={subService.title}
@@ -27,13 +27,12 @@ const SubServicesSection = ({ serviceKey }) => {
                 ))}
             </motion.div>
 
-            <motion.div className="hidden gap-10 px-8 md:grid md:grid-cols-2 z-10 lg:hidden"  
+            <motion.div className="z-10 hidden w-full gap-0 mt-10 md:grid md:grid-cols-2 xl:hidden"  
                 initial={{ y: "15%", opacity: 0 }}
                 whileInView={{ y: "0", opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}>
                 {data.map((subService, index) => (
-                    <div 
-                        key={index}>
+                    <div key={index} className="flex items-center justify-center">
                         <SubServiceCard
                             icon={subService.icon}
                             title={subService.title}
