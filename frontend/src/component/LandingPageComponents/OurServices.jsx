@@ -18,7 +18,7 @@ const OurServices = () => {
                 <motion.div className='absolute xs:top-4 top-4 w-[100%] py-5' initial={{ y: "-20%", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: [0.42, 0, 0.58, 1] }}>
-                    <h1 className='xs:text-2xl text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-white '> What We Do ? </h1>
+                    <h1 className='text-3xl font-bold text-center text-white xs:text-2xl lg:text-4xl xl:text-5xl '> What We Do ? </h1>
                 </motion.div>
             </div>
             <motion.div className="z-10 hidden gap-4 px-8 lg:grid lg:grid-cols-4"  initial={{ y: "15%", opacity: 0 }}
@@ -40,8 +40,8 @@ const OurServices = () => {
                     </div>
                 ))}
             </motion.div>
-            <div className="lg:hidden xs:mt-0 mt-2">
-                <Carousel>
+            <div className="mt-2 lg:hidden xs:mt-0">
+                <Carousel autoSlide={true}>
                     {servicesData.map((service, index) => (
                         <ServiceCard
                             key={index}
