@@ -55,7 +55,7 @@ const OurPartners = () => {
                     ))}
                 </motion.div>
                 <div className="lg:hidden mt-[16rem]">
-                    <Carousel>
+                    <Carousel autoSlide={true}>
                         {partnersData.map((partner, index) => (
                             <PartnerCard
                                 logo={partner.logo}

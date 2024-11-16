@@ -43,7 +43,7 @@ const SubServicesSection = ({ serviceKey }) => {
             </motion.div>
 
             <div className="md:hidden">
-                <Carousel>
+                <Carousel autoSlide={true}>
                     {data.map((subService, index) => (
                         <SubServiceCard
                             key={index}

@@ -53,7 +53,7 @@ const Clients = () => {
       place: "corner",
     },
   ];
-
+  
   const [count1, setCount1] = useState(1);
 
   useEffect(() => {
@@ -192,7 +192,7 @@ const Clients = () => {
         }
         {
           <div className=" flex-3 h-[10rem] text-white xs:px-4 px-10 sm:px-16 md:px-20 lg:px-36 xl:px-[20%] absolute bottom-0 w-full">
-            <div className="mt-8 flex  justify-between  text-center z-10 w-full">
+            <div className="z-10 flex justify-between w-full mt-8 text-center">
               {statDescription.map((statUnit) => (
                 <motion.div
                   className={`${
@@ -201,7 +201,7 @@ const Clients = () => {
                       : "xs:bottom-[-20px] bottom-[10px] md:bottom-[-10px] lg:bottom-0 xl:bottom-[20px]"
                   } xs:flex-col md:flex relative     items-center `}
                 >
-                  <div className=" flex justify-center   items-center ">
+                  <div className="flex items-center justify-center ">
                     <img
                       src={statUnit.picture}
                       alt={statUnit.description}
@@ -209,7 +209,7 @@ const Clients = () => {
                     />
                   </div>
                   <div className="xs:mt-1 mt-2  sm:mt-[5px] md:mt-0 md:ml-[0px] w-[3rem] flex flex-col items-left md:items-left md:justify-center md:h-[5rem]">
-                    <span className="xs:text-xl text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold md:text-left">
+                    <span className="text-xl font-bold xs:text-xl sm:text-2xl md:text-xl lg:text-2xl md:text-left">
                       {statUnit.id === 1
                         ? count1
                         : statUnit.id === 2
@@ -221,7 +221,7 @@ const Clients = () => {
                         : null}
                       {""}+
                     </span>
-                    <p className="xs:text-xs text-xs sm:text-sm md:text-xs md:text-left">
+                    <p className="text-xs xs:text-xs sm:text-sm md:text-xs md:text-left">
                       {statUnit.description}
                     </p>
                   </div>

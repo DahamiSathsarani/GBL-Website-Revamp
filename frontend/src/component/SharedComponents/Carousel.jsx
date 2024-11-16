@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-const Carousel = ({ children }) => {
+
+const Carousel = ({ children, autoSlide=false, autoSlideInterval = 3000 }) => {
   const [currentIndex, setCurr] = useState(0);
   const totalSlides = React.Children.count(children);
+
+  const next = useCallback(() =>
+      setCurr((currentIndex) => currentIndex === totalSlides - 1 ? 0 : currentIndex + 1
+      ),[totalSlides])
+
+  useEffect(() => {
+    if(!autoSlide) return
+    const slideInterval = setInterval(next, autoSlideInterval)
+    return () => clearInterval(slideInterval)
+  }, [autoSlide, autoSlideInterval, next])
 
   return (
     <motion.section
@@ -15,8 +26,7 @@ const Carousel = ({ children }) => {
         <div className=" overflow-hidden w-[100%]">
           <div
             className="flex transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {React.Children.map(children, (child, index) => (
               <div className="flex-shrink-0 w-full " key={index}>
                 {child}
@@ -33,11 +43,11 @@ const Carousel = ({ children }) => {
               key={i}
               onClick={() => setCurr(i)}
               className={`transition-all w-3 h-3 rounded-full bg-white z-50
-                                        ${
-                                          currentIndex === i
-                                            ? "scale-150 transition-all duration-300"
-                                            : "bg-opacity-50 cursor-pointer"
-                                        }`}
+                  ${
+                      currentIndex === i
+                      ? "scale-150 transition-all duration-300"
+                      : "bg-opacity-50 cursor-pointer"
+                  }`}
             ></div>
           ))}
         </div>
