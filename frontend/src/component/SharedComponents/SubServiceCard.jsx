@@ -19,16 +19,16 @@ const SubServiceCard = ({ icon, title, content }) => {
                 )}
 
                 {!isHovered && (
-                    <div className='flex flex-col items-center justify-center h-[25%] xs:w-[150px] md:w-[200px] xl:w-[250px]'>
-                        <h3 className="xs:text-[15px] text-[18px] lg:text-[25px] font-bold mb-2 text-center text-shadow-outline">
+                    <div className='flex flex-col items-center justify-center h-[25%] xs:w-[150px] w-[180px] md:w-[200px] xl:w-[250px]'>
+                        <h3 className="xs:text-[15px] text-[18px] lg:text-[22px] font-bold mb-2 text-center text-shadow-outline">
                             {title}
                         </h3>
                     </div>
                 )}
 
                 {isHovered && (
-                    <div className='flex flex-col items-center justify-center h-[25%] xs:w-[150px] w-[200px] md:w-[200px] lg:w-[230px] xl:w-[240px] transition-opacity duration-700 ease-in-out'>
-                        <p className="text-center xs:text-[10px] text-[13px] sm:text-[14px] lg:text-[16px] xl:text-[15px]">
+                    <div className='flex flex-col items-center justify-center h-[24%] xs:w-[150px] w-[170px] md:w-[200px] lg:w-[230px] xl:w-[240px] transition-opacity duration-700 ease-in-out'>
+                        <p className="text-center xs:text-[10px] text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[15px]">
                             {content}
                         </p>
                     </div>
