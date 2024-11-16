@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import bakersBlendLogo from "../../assets/images/client-logos/Baker's Blend.png";
 import newStepFinanceLogo from "../../assets/images/client-logos/New step finance.png";
 import icelandRideLogo from "../../assets/images/client-logos/Icelandride.png";
@@ -53,76 +53,54 @@ const Clients = () => {
       place: "corner",
     },
   ];
-  const clientsCarousel = [...clientLogoes, ...clientLogoes];
-  //
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto change the currentIndex every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === clientLogoes.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // 3 seconds interval
-
-    return () => clearInterval(interval); // Clean up interval on component unmount
-  }, []);
-
-  ////
   const [count1, setCount1] = useState(1);
 
   useEffect(() => {
     if (count1 < 20) {
       const interval = setInterval(() => {
         setCount1((prevCount) => prevCount + 1);
-      }, 300); // Update every 100 milliseconds
+      }, 300);
 
-      return () => clearInterval(interval); // Cleanup the interval on unmount
+      return () => clearInterval(interval);
     }
   }, [count1]);
 
-  ////
   const [count2, setCount2] = useState(1);
 
   useEffect(() => {
     if (count2 < 60) {
       const interval = setInterval(() => {
         setCount2((prevCount) => prevCount + 1);
-      }, 100); // Update every 100 milliseconds
+      }, 100);
 
-      return () => clearInterval(interval); // Cleanup the interval on unmount
+      return () => clearInterval(interval);
     }
   }, [count2]);
-  ////
 
-  ////
   const [count3, setCount3] = useState(1);
 
   useEffect(() => {
     if (count3 < 5) {
       const interval = setInterval(() => {
         setCount3((prevCount) => prevCount + 1);
-      }, 1400); // Update every 100 milliseconds
+      }, 1400);
 
-      return () => clearInterval(interval); // Cleanup the interval on unmount
+      return () => clearInterval(interval);
     }
   }, [count3]);
-  ////
 
-  ////
   const [count4, setCount4] = useState(1);
 
   useEffect(() => {
     if (count4 < 200) {
       const interval = setInterval(() => {
         setCount4((prevCount) => prevCount + 1);
-      }, 25); // Update every 100 milliseconds
+      }, 25);
 
-      return () => clearInterval(interval); // Cleanup the interval on unmount
+      return () => clearInterval(interval);
     }
   }, [count4]);
-  ////
 
   return (
     <section className="w-[100%] xs:h-[40rem] h-[43rem] sm:h-[44rem] lg:h-[48rem] xl:h-[50rem] flex justify-center items-center ">
@@ -164,41 +142,50 @@ const Clients = () => {
         </div>
 
         {
-          <div className="lg:flex-2 h-[20rem] lg:flex items-center xs:top-[3.5rem] top-[1rem] sm:top-[-0.5rem] justify-center relative overflow-hidden w-[100%] ">
-            <div className="relative flex justify-center h-[20rem] items-center overflow-hidden w-[100%]">
+          <div className="lg:flex-2 h-[20rem] lg:flex items-center xs:top-[3.5rem] top-[1rem] sm:top-[-0.5rem] justify-center relative overflow-hidden w-full ">
+            <div className="relative flex justify-center h-[20rem] items-center overflow-hidden w-[100%] ">
               <motion.div
                 className="flex space-x-10 flex-nowrap"
                 initial={{ x: "-26%" }}
                 animate={{
-                  x: `-${clientLogoes.length * 15}rem`,
+                  x: `-${clientLogoes.length * 205}rem`,
                 }}
                 transition={{
-                  duration: 150,
+                  duration: 170,
                   ease: "linear",
                   repeat: Infinity,
                   repeatType: "loop",
                 }}
                 style={{
                   display: "flex",
-                  width: `${clientLogoes.length * 15}rem`,
+                  width: `100%`,
                 }}
               >
-                {[...clientLogoes, ...clientLogoes, ...clientLogoes].map(
-                  (client, index) => (
-                    <div
-                      key={`${client.id}-${index}`}
-                      className="flex-shrink-0 shadow-[2px_4px_8px_rgba(0,0,0,0.15)] xs:w-44 xs:h-32 w-56 h-36 lg:h-[11.5rem] lg:w-[22rem] rounded-lg p-4 bg-white flex justify-center items-center"
-                    >
-                      <div className="flex items-center justify-center xs:w-40 xs:h-24 sm:w-48 sm:h-30 h-28 w-44 lg:h-[9rem] lg:w-[18rem] bg-[#f2f2f2] border-[1px] border-[#00B09C] rounded-lg shadow-md">
-                        <img
-                          src={client.logo}
-                          alt={client.name}
-                          className="sm:w-36 sm:h-30 xs:h-24 xs:w-40 h-28 w-44 lg:h-[9rem] lg:w-[18rem] object-contain"
-                        />
-                      </div>
+                {[
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                  ...clientLogoes,
+                ].map((client, index) => (
+                  <div
+                    key={`${client.id}-${index}`}
+                    className="flex-shrink-0 shadow-[2px_4px_8px_rgba(0,0,0,0.15)] xs:w-44 xs:h-32 w-56 h-36 lg:h-[11.5rem] lg:w-[22rem] rounded-lg p-4 bg-white flex justify-center items-center"
+                  >
+                    <div className="flex items-center justify-center xs:w-40 xs:h-24 sm:w-48 sm:h-30 h-28 w-44 lg:h-[9rem] lg:w-[18rem] bg-[#f2f2f2] border-[1px] border-[#00B09C] rounded-lg shadow-md">
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        className="sm:w-36 sm:h-30 xs:h-24 xs:w-40 h-28 w-44 lg:h-[9rem] lg:w-[18rem] object-contain"
+                      />
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </motion.div>
             </div>
           </div>
@@ -209,7 +196,7 @@ const Clients = () => {
               {statDescription.map((statUnit) => (
                 <motion.div
                   className={`${
-                    statUnit.place == "mid"
+                    statUnit.place === "mid"
                       ? "xs:bottom-[10px] bottom-[60px] sm:bottom-[80px] md:bottom-[70px] xl:bottom-[90px] xs:mx-0 mx-[10px] "
                       : "xs:bottom-[-20px] bottom-[10px] md:bottom-[-10px] lg:bottom-0 xl:bottom-[20px]"
                   } xs:flex-col md:flex relative     items-center `}
@@ -227,9 +214,9 @@ const Clients = () => {
                         ? count1
                         : statUnit.id === 2
                         ? count2
-                        : statUnit.id == 3
+                        : statUnit.id === 3
                         ? count3
-                        : statUnit.id == 4
+                        : statUnit.id === 4
                         ? count4
                         : null}
                       {""}+
