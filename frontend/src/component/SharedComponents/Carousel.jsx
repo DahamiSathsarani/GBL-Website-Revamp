@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Carousel = ({ children, autoSlide=false, autoSlideInterval = 3000 }) => {
   const [currentIndex, setCurr] = useState(0);
   const totalSlides = React.Children.count(children);
 
-  const next = () => setCurr((currentIndex) => currentIndex === totalSlides - 1 ? 0 : currentIndex + 1)
+  const next = useCallback(() =>
+      setCurr((currentIndex) => currentIndex === totalSlides - 1 ? 0 : currentIndex + 1
+      ),[totalSlides])
 
   useEffect(() => {
     if(!autoSlide) return
     const slideInterval = setInterval(next, autoSlideInterval)
     return () => clearInterval(slideInterval)
-  }, [])
+  }, [autoSlide, autoSlideInterval, next])
 
   return (
     <motion.section
