@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import bakersBlendLogo from "../../assets/images/client-logos/Baker's Blend.png";
 import newStepFinanceLogo from "../../assets/images/client-logos/New step finance.png";
 import icelandRideLogo from "../../assets/images/client-logos/Icelandride.png";
@@ -53,21 +53,6 @@ const Clients = () => {
       place: "corner",
     },
   ];
-  const clientsCarousel = [...clientLogoes, ...clientLogoes];
-  //
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto change the currentIndex every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === clientLogoes.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // 3 seconds interval
-
-    return () => clearInterval(interval); // Clean up interval on component unmount
-  }, []);
 
   ////
   const [count1, setCount1] = useState(1);
@@ -173,7 +158,7 @@ const Clients = () => {
                   x: `-${clientLogoes.length * 15}rem`,
                 }}
                 transition={{
-                  duration: 150,
+                  duration: 20,
                   ease: "linear",
                   repeat: Infinity,
                   repeatType: "loop",
@@ -205,16 +190,16 @@ const Clients = () => {
         }
         {
           <div className=" flex-3 h-[10rem] text-white xs:px-4 px-10 sm:px-16 md:px-20 lg:px-36 xl:px-[20%] absolute bottom-0 w-full">
-            <div className="mt-8 flex  justify-between  text-center z-10 w-full">
+            <div className="z-10 flex justify-between w-full mt-8 text-center">
               {statDescription.map((statUnit) => (
                 <motion.div
                   className={`${
-                    statUnit.place == "mid"
+                    statUnit.place === "mid"
                       ? "xs:bottom-[10px] bottom-[60px] sm:bottom-[80px] md:bottom-[70px] xl:bottom-[90px] xs:mx-0 mx-[10px] "
                       : "xs:bottom-[-20px] bottom-[10px] md:bottom-[-10px] lg:bottom-0 xl:bottom-[20px]"
                   } xs:flex-col md:flex relative     items-center `}
                 >
-                  <div className=" flex justify-center   items-center ">
+                  <div className="flex items-center justify-center ">
                     <img
                       src={statUnit.picture}
                       alt={statUnit.description}
@@ -222,19 +207,19 @@ const Clients = () => {
                     />
                   </div>
                   <div className="xs:mt-1 mt-2  sm:mt-[5px] md:mt-0 md:ml-[0px] w-[3rem] flex flex-col items-left md:items-left md:justify-center md:h-[5rem]">
-                    <span className="xs:text-xl text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold md:text-left">
+                    <span className="text-xl font-bold xs:text-xl sm:text-2xl md:text-xl lg:text-2xl md:text-left">
                       {statUnit.id === 1
                         ? count1
                         : statUnit.id === 2
                         ? count2
-                        : statUnit.id == 3
+                        : statUnit.id === 3
                         ? count3
-                        : statUnit.id == 4
+                        : statUnit.id === 4
                         ? count4
                         : null}
                       {""}+
                     </span>
-                    <p className="xs:text-xs text-xs sm:text-sm md:text-xs md:text-left">
+                    <p className="text-xs xs:text-xs sm:text-sm md:text-xs md:text-left">
                       {statUnit.description}
                     </p>
                   </div>
