@@ -3,14 +3,17 @@
 @tailwind utilities;
 
 @layer components {
-    .bg-gradient {
-      @apply bg-gradient-to-r from-[#00CEB1] to-[#1C3A7B];
-    }
-
-    .text-gradient {
-        @apply bg-gradient-to-b from-[#00CEB1] to-[#1C3A7B] bg-clip-text text-transparent;
-      }
+  .bg-gradient {
+    @apply bg-gradient-to-r from-[#00CEB1] to-[#1C3A7B];
   }
+
+  .text-gradient {
+    @apply bg-gradient-to-b from-[#00CEB1] to-[#1C3A7B] bg-clip-text text-transparent;
+  }
+  .sub-menu-gradient {
+    @apply bg-gradient-to-b from-[#161E3A] to-[#3D52A0] bg-clip-text text-transparent;
+  }
+}
 
 html {
   scroll-behavior: smooth;
