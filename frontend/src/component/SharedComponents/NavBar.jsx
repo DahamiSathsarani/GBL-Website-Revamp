@@ -3,31 +3,29 @@ import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { images } from "../../assets/images/assestsImages";
 import { IoIosArrowDropleft } from "react-icons/io";
+import { Link } from "react-router-dom";
 export default function NavBar() {
   const navbarItems = [
     {
       name: "Company",
-      url: "/",
       type: "Dropdown",
       items: [
-        { name: "About Us", Link: "/" },
-        { name: "Leadership Team", Link: "/" },
-        { name: "Career", Link: "/" },
+        { name: "About Us", Link: "/company/about-us" },
+        { name: "Leadership Team", Link: "/company/leadership-team" },
       ],
     },
     {
       name: "Our Services",
-      url: "",
       type: "Dropdown",
       items: [
-        { name: "Web Development", Link: "/" },
-        { name: "BPO/KPO", Link: "/" },
-        { name: "IT Infrastructure", Link: "/" },
-        { name: "Digital Marketing", Link: "/" },
+        { name: "Web Development", Link: "/our-services/web-development" },
+        { name: "BPO/KPO", Link: "/our-services/bpo-kpo" },
+        { name: "IT Infrastructure", Link: "/our-services/it-infrastructure" },
+        { name: "Digital Marketing", Link: "/our-services/digital-marketing" },
       ],
     },
-    { name: "Our Products", url: "", type: "Link" },
-    { name: "Contact Us", url: "/", type: "Link" },
+    { name: "Our Products", url: "/our-products", type: "Link" },
+    { name: "Contact Us", url: "/contact-us", type: "Link" },
   ];
   const [isClickedOnMenuBar, setClickedOnMenuBar] = useState(false);
   const [isClickedOnSubMenuBar, setClickedOnSubMenuBar] = useState(null);
@@ -42,23 +40,23 @@ export default function NavBar() {
   return (
     <section className="absolute w-full z-50">
       <div className="flex items-center justify-between h-[3.5rem] sm:h-[4.5rem] md:h-[5rem] lg:h-[6rem] bg-[#ffffff] shadow-2xl mx-[10%] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[8rem] rounded-[35px] px-[2rem] lg:px-[2rem] xl:px-[3rem] mt-5 lg:mt-10 ">
-        <a href="/">
+        <Link to="/">
           <img
             className="h-[2.5rem] sm:h-[3.5rem]  md:h-[4rem] xl:h-[5rem] xl:w-auto"
             src={images.GBLLogo}
             alt="GBL logo"
           />
-        </a>
+        </Link>
         <ul className="hidden  lg:flex lg:w-[55%]  xl:w-[50%] justify-between font-poppins font-bold lg:text-[16px] xl:text-[18px] items-center h-[6rem]">
           {navbarItems.map((item) =>
             item.type === "Link" ? (
               <li className="group  " key={item.name}>
-                <a
+                <Link
                   className=" hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear text-[#000000]  h-[2rem] items-center"
-                  href={item.url}
+                  to={item.url}
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ) : (
               <li className=" group" key={item.name}>
@@ -70,13 +68,13 @@ export default function NavBar() {
                   key={item.name}
                 >
                   {item.items.map((subItem) => (
-                    <a
+                    <Link
                       className="inline-flex self-center hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear mb-2 "
-                      href={subItem.Link}
+                      to={subItem.Link}
                       key={subItem.name}
                     >
                       {subItem.name}
-                    </a>
+                    </Link>
                   ))}
                 </ul>
               </li>
@@ -110,15 +108,14 @@ export default function NavBar() {
             />
           </div>
           <div className="flex-col px-7 mt-[2rem]">
-            {" "}
             {navbarItems.map((item, index) =>
               item.type === "Link" ? (
-                <a
+                <Link
                   className="block   text-gradient  text-[18px] sm:text-[20px] md:text-[22px] py-4"
-                  href={item.url}
+                  to={item.url}
                 >
                   {item.name}
-                </a>
+                </Link>
               ) : (
                 <div className="flex-col">
                   <span className="flex   items-center justify-between text-gradient text-[18px] sm:text-[20px] md:text-[22px] py-4">
@@ -143,12 +140,12 @@ export default function NavBar() {
                     } flex-col overflow-hidden transition-all duration-700 transform ml-4 `}
                   >
                     {item.items.map((subItem) => (
-                      <a
-                        href={subItem.Link}
+                      <Link
+                        to={subItem.Link}
                         className="text-gradient block my-1 text-[16px] sm:text-[18px] md:text-[20px]"
                       >
                         {subItem.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
