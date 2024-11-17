@@ -21,7 +21,11 @@ import Partner3Image from './partners-logos/Partners3.png'
 import Partner4Image from './partners-logos/Partners4.png'
 import ClientsWave from './ClientsWave.png'
 import ClientsShape from './ClientsShape.png'
-
+import SubHeroSectionUpperWave from './Sub Hero Section/sub hero section upper wave.svg';
+import SubHeroSectionLowerWave from './Sub Hero Section/sub hero section lower wave.svg';
+import AboutPagePicture from './about Page/About Picture.svg'
+import AboutPageUpperIcon from './about Page/Upper Icon.svg'
+import AboutPageLowerIcon from './about Page/Lower Icon.svg'
 export const images = {
     HeroPicture,
     HeroPictureMobileView,
@@ -46,4 +50,9 @@ export const images = {
     Partner4Image,
     ClientsWave,
     ClientsShape,
+    SubHeroSectionUpperWave,
+    SubHeroSectionLowerWave,
+    AboutPagePicture,
+    AboutPageLowerIcon,
+    AboutPageUpperIcon
 }
