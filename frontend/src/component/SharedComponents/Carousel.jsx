@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const Carousel = ({ children, autoSlide=false, autoSlideInterval = 3000 }) => {
+const Carousel = ({ children, autoSlide=false, autoSlideInterval = 3000, isProduct=false }) => {
   const [currentIndex, setCurr] = useState(0);
   const totalSlides = React.Children.count(children);
 
@@ -42,7 +42,7 @@ const Carousel = ({ children, autoSlide=false, autoSlideInterval = 3000 }) => {
             <div
               key={i}
               onClick={() => setCurr(i)}
-              className={`transition-all w-3 h-3 rounded-full bg-white z-50
+              className={`transition-all w-3 h-3 rounded-full z-50 ${isProduct ? "bg-gray-400" : "bg-white"}
                   ${
                       currentIndex === i
                       ? "scale-150 transition-all duration-300"
