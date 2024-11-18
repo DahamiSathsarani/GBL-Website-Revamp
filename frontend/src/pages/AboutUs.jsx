@@ -2,7 +2,8 @@ import MainLayout from "../component/SharedComponents/MainLayout";
 import SubHeroSection from "../component/SharedComponents/sub-hero-section";
 import { images } from "../assets/images/assestsImages";
 import VissionMission from "../component/AboutUsPageComponents/VissionMission";
-export default function () {
+
+const AboutUs = () => {
   const descriptionElement = (
     <div className="xs:px-8 px-14 md:px-24 lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem]">
       <h1 className="text-gradient text-center lg:text-left xs:text-[20px] text-[25px] xl:text-[30px] 2xl:[35px] mb-[1rem] font-poppins">
@@ -36,3 +37,5 @@ export default function () {
     </section>
   );
 }
+
+export default AboutUs;

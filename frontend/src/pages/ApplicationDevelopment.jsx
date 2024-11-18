@@ -3,6 +3,7 @@ import SubServicesSection from "../component/OurServicesPageComponents/SubServic
 import MainLayout from "../component/SharedComponents/MainLayout";
 import SubHeroSection from "../component/SharedComponents/sub-hero-section";
 import { images } from "../assets/images/assestsImages";
+
 const ApplicationDevelopment = () => {
   const descriptionElement = (
     <div className="xs:px-8 px-14 md:px-24 lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem]">
