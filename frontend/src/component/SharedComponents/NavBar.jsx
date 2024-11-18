@@ -38,7 +38,7 @@ export default function NavBar() {
   };
 
   return (
-    <section className="absolute w-full z-50">
+    <section className="absolute z-50 w-full">
       <div className="flex items-center justify-between h-[3.5rem] sm:h-[4.5rem] md:h-[5rem] lg:h-[6rem] bg-[#ffffff] shadow-2xl mx-[10%] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[8rem] rounded-[35px] px-[2rem] lg:px-[2rem] xl:px-[3rem] mt-5 lg:mt-10 ">
         <Link to="/">
           <img
@@ -50,7 +50,7 @@ export default function NavBar() {
         <ul className="hidden  lg:flex lg:w-[55%]  xl:w-[50%] justify-between font-poppins font-bold lg:text-[16px] xl:text-[18px] items-center h-[6rem]">
           {navbarItems.map((item) =>
             item.type === "Link" ? (
-              <li className="group  " key={item.name}>
+              <li className="group " key={item.name}>
                 <Link
                   className=" hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear text-[#000000]  h-[2rem] items-center"
                   to={item.url}
@@ -69,7 +69,7 @@ export default function NavBar() {
                 >
                   {item.items.map((subItem) => (
                     <Link
-                      className="inline-flex self-center hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear mb-2 "
+                      className="inline-flex self-center mb-2 hover:text-gradient hover:transition-all hover:duration-200 hover:ease-linear "
                       to={subItem.Link}
                       key={subItem.name}
                     >
@@ -95,13 +95,13 @@ export default function NavBar() {
         >
           {" "}
           <div className="flex justify-between h-[5rem] sm:h-[6rem] md:h-[6.5rem] items-center px-7 border-b-[1px] border-[#00B09C]">
-            <a href="/">
+            <Link to="/">
               <img
                 className="h-[3rem] sm:h-[4rem] md:h-[4.5rem]"
                 src={images.GBLLogo}
                 alt="GBL logo"
               />
-            </a>
+            </Link>
             <RxCross2
               className="text-[30px] sm:text-[35px] md:text-[40px] text-[#00B09C] cursor-pointer"
               onClick={clickingTheMenuBar}
