@@ -21,6 +21,21 @@ import Partner3Image from './partners-logos/Partners3.png'
 import Partner4Image from './partners-logos/Partners4.png'
 import ClientsWave from './ClientsWave.png'
 import ClientsShape from './ClientsShape.png'
+import SubHeroSectionUpperWave from './Sub Hero Section/sub hero section upper wave.svg';
+import SubHeroSectionLowerWave from './Sub Hero Section/sub hero section lower wave.svg';
+import AboutPagePicture from './about Page/About Picture.svg'
+import AboutPageUpperIcon from './about Page/Upper Icon.svg'
+import AboutPageLowerIcon from './about Page/Lower Icon.svg'
+import ContactUsPicture from './contactUs Page/picture.svg'
+import ContactUsPageUpperIcon from './contactUs Page/Upper Icon.svg'
+import ConactUsPageLowerIcon from './contactUs Page/Lower Icon.svg'
+import OurProductsPicture from './our products page/Picture.svg'
+import OurProductsPageUpperIcon from './our products page/Upper Icon.svg'
+import OurProductsPageLowerIcon from './our products page/Lower Icon.svg'
+import ApplicationDevelopmentPicture from './application development page/picture.svg'
+import ApplicationDevelopmentUpperIcon from './application development page/Upper Icon.svg';
+import ApplicationDevelopmentLowerIcon from './application development page/Lower Icon.svg';
+
 
 export const images = {
     HeroPicture,
@@ -46,4 +61,18 @@ export const images = {
     Partner4Image,
     ClientsWave,
     ClientsShape,
+    SubHeroSectionUpperWave,
+    SubHeroSectionLowerWave,
+    AboutPagePicture,
+    AboutPageLowerIcon,
+    AboutPageUpperIcon,
+    ContactUsPicture,
+    ContactUsPageUpperIcon,
+    ConactUsPageLowerIcon,
+    OurProductsPicture,
+    OurProductsPageUpperIcon,
+    OurProductsPageLowerIcon,
+    ApplicationDevelopmentPicture,
+    ApplicationDevelopmentUpperIcon,
+    ApplicationDevelopmentLowerIcon
 }
