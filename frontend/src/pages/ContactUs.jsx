@@ -1,4 +1,5 @@
 import { images } from "../assets/images/assestsImages";
+import MapAndFormSection from "../component/ContactUsPageComponents/mapAndFormSection";
 import MainLayout from "../component/SharedComponents/MainLayout";
 import SubHeroSection from "../component/SharedComponents/sub-hero-section";
 
@@ -34,9 +35,10 @@ const ContactUs = () => {
     <div>
       <MainLayout>
         <SubHeroSection {...ContactUsSectionDescription} />
+        <MapAndFormSection />
       </MainLayout>
     </div>
   );
-}
+};
 
 export default ContactUs;
