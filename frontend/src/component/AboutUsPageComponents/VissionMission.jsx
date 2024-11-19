@@ -22,46 +22,49 @@ const VissionMission = () => {
   };
 
   return (
-    <div className="space-y-8 max-w-[1000px] mx-auto p-8">
+    <div className="space-y-8 w-full px-[10%] lg:px-[7rem] xl:px-[9rem] 2xl:px-[11rem] pb-[3rem] xs:mt-0 mt-[1rem] sm:mt-[3rem] xs:h-[60rem] h-[65rem] lg:h-[50rem] flex flex-col justify-center">
       <div
         style={{
           backgroundImage: `url(${vissionData.background})`,
-          minHeight: "300px",
-          minWidth: "100%",
         }}
-        className="flex flex-col md:flex-row items-center justify-center rounded-[20px] bg-cover bg-center p-6 md:p-8"
+        className="xs:h-[25rem] h-[28rem] lg:h-[20rem] flex flex-col lg:flex-row items-center w-full lg:justify-between rounded-bl-[50px] rounded-tr-[50px] bg-cover bg-center p-6 md:p-8  "
       >
-        <div className="flex-shrink-0 w-full md:w-[35%]">
+        <div className=" w-full lg:w-[45%] xs:h-[40%] h-[12rem] sm:h-[16rem] ">
           <img
-            className="w-full h-auto rounded-tr-[40px] rounded-bl-[40px]"
+            className="w-full xs:h-[100%] h-[12rem] sm:h-[16rem] rounded-tr-[40px] rounded-bl-[40px] object-cover"
             src={vissionData.img}
             alt="Vision"
           />
         </div>
-        <div className="text-center md:text-left md:ml-6 mt-4 md:mt-0 text-white">
-          <h2 className="text-2xl font-bold mb-2">{vissionData.title}</h2>
-          <p className="text-base font-light">{vissionData.content}</p>
+        <div className="text-center lg:text-left md:ml-6 mt-4 md:mt-0 text-white h-[60%] flex flex-col  justify-center lg:w-[45%]">
+          <h2 className="text-2xl lg:text-[30px] xl:text-[35px] lg:mb-[1rem] font-bold mb-2 text-[#161E3A]">
+            {vissionData.title}
+          </h2>
+          <p className="text-[16px] lg:text-[18px] xl:text-[20px] text-base font-light">
+            {vissionData.content}
+          </p>
         </div>
       </div>
-
       <div
         style={{
           backgroundImage: `url(${missionData.background})`,
-          minHeight: "300px",
-          minWidth: "100%",
         }}
-        className="flex flex-col md:flex-row items-center justify-center rounded-[20px] bg-cover bg-center p-6 md:p-8"
+        className="w-full flex xs:h-[25rem] h-[28rem] lg:h-[20rem] flex-col lg:flex-row-reverse items-center lg:justify-between rounded-bl-[50px] rounded-tr-[50px] bg-cover bg-center p-6 md:p-8"
       >
-        <div className="text-center md:text-left md:ml-6 mt-4 md:mt-0 text-white">
-          <h2 className="text-2xl font-bold mb-2">{missionData.title}</h2>
-          <p className="text-base font-light">{missionData.content}</p>
-        </div>
-        <div className="flex-shrink-0 w-full md:w-[35%]">
+        <div className=" w-full lg:w-[45%] xs:h-[40%] h-[12rem] sm:h-[16rem]">
           <img
-            className="w-full h-auto rounded-tr-[40px] rounded-bl-[40px]"
+            className="w-full xs:h-[100%] h-[12rem] sm:h-[16rem] rounded-tr-[40px] rounded-bl-[40px] object-cover"
             src={missionData.img}
             alt="Mission"
           />
+        </div>
+        <div className="text-center lg:text-left md:ml-6 mt-4 md:mt-0 text-white h-[60%] flex flex-col  lg:w-[45%]">
+          <h2 className="text-2xl xl:text-[35px] lg:text-[30px] lg:mb-[1rem] font-bold mb-2 text-[#161E3A]">
+            {missionData.title}
+          </h2>
+          <p className="text-[16px] lg:text-[18px] xl:text-[20px] text-base font-light">
+            {missionData.content}
+          </p>
         </div>
       </div>
     </div>

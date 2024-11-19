@@ -19,10 +19,10 @@ export default function MapAndFormSection() {
     }
   };
   return (
-    <section className="mx-[10%] xs:my-0 xs:mb-[3rem] mt-[3rem] mb-[3rem] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[8rem] bg-[#E7E6E9]">
+    <section className="mx-[10%] lg:mx-[7rem] xl:mx-[9rem] 2xl:mx-[11rem] xs:mt-0 mt-[2rem] sm:mt-[3rem] lg:mt-[5rem] xs:mb-[3rem] mb-[4rem] bg-[#E7E6E9]  ">
       <div>
         <iframe
-          className="w-full h-[300px] sm:h-[500px]"
+          className="w-full h-[300px] sm:h-[400px]"
           frameborder="0"
           scrolling="no"
           marginheight="0"

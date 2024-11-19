@@ -5,11 +5,11 @@ import VissionMission from "../component/AboutUsPageComponents/VissionMission";
 
 const AboutUs = () => {
   const descriptionElement = (
-    <div className="xs:px-8 px-14 md:px-24 lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem]">
-      <h1 className="text-gradient text-center lg:text-left xs:text-[20px] text-[25px] xl:text-[30px] 2xl:[35px] mb-[1rem] font-poppins">
+    <div className=" mx-[10%] lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:pl-[2rem] xl:pl-[3rem]">
+      <h1 className="text-gradient text-center lg:text-left xs:text-[20px] text-[23px] xl:text-[26px] 2xl:[40px] mb-[1rem] lg:mb-[8px] font-poppins">
         GREAT SOLUTIONS FOR YOUR BUSINESS
       </h1>
-      <p className="text-[#1C3A7B] text-center lg:text-justify xs:text-[16px] text-[18px] xl:text-[22px] 2xl:text-[24px] font-sans">
+      <p className="text-[#1C3A7B] text-center lg:text-justify xs:text-[16px] text-[17px] xl:text-[19px] 2xl:text-[25px] font-sans">
         If you are looking for a trusted and dedicated partner for various
         IT-related services, you are perfect. “GBL” is a leading IT company that
         offers uniqueness and innovations to the world of IT with a wide range
@@ -36,6 +36,6 @@ const AboutUs = () => {
       </MainLayout>
     </section>
   );
-}
+};
 
 export default AboutUs;
