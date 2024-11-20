@@ -35,6 +35,9 @@ import OurProductsPageLowerIcon from './our products page/Lower Icon.svg'
 import ApplicationDevelopmentPicture from './application development page/picture.svg'
 import ApplicationDevelopmentUpperIcon from './application development page/Upper Icon.svg';
 import ApplicationDevelopmentLowerIcon from './application development page/Lower Icon.svg';
+import LeaderShipPicture from './Leadership Team/Leadership team.jpg'
+import LeadershipTeamUpperIcon from './Leadership Team/Upper Icon.svg'
+import LeadershipTeamLowerIcon from './Leadership Team/Lower Icon.svg'
 
 
 export const images = {
@@ -74,5 +77,8 @@ export const images = {
     OurProductsPageLowerIcon,
     ApplicationDevelopmentPicture,
     ApplicationDevelopmentUpperIcon,
-    ApplicationDevelopmentLowerIcon
+    ApplicationDevelopmentLowerIcon,
+    LeaderShipPicture,
+    LeadershipTeamUpperIcon,
+    LeadershipTeamLowerIcon
 }
