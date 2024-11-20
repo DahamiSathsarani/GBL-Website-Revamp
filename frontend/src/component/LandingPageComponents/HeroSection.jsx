@@ -1,6 +1,7 @@
 import React from "react";
 import { images } from "../../assets/images/assestsImages";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -35,11 +36,12 @@ const HeroSection = () => {
             Unleashing <br></br> Innovation Through <br></br> Lines of Code
           </h1>
           <p class="mb-6 text-[15px] sm:text-[17px] md:text-[18px] text-[#7A7878]  lg:w-[80%] mx-6 sm:mx-10 2xl:w-[85%]">
-            We use the power of technology to push the boundaries in our digital age.
+            We use the power of technology to push the boundaries in our digital
+            age.
           </p>
           <div className="flex flex-col  h-[6rem] sm:h-[9rem] lg:h-auto justify-between mx-6 sm:mx-10">
             <button className=" lg:flex font-sans font-bold text-[#ffffff] text-[14px] lg:text-[14px] xl:text-[16px] bg-gradient lg:h-[3rem] h-[2.5rem] sm:h-[3.5rem] xl:h-[3.5rem] w-full lg:w-[12rem] xl:w-[15rem]  items-center justify-center rounded-[20px] hover:text-gradient hover:border-4 hover:border-[#008A7D] transition-all duration-500 ease-linear ">
-              Discover More
+              <Link to="/company/about-us">Discover More</Link>
             </button>
             <button className="font-sans font-bold lg:hidden text-[#008A7D] text-[14px]   h-[2.5rem] sm:h-[3.5rem] w-full   rounded-[20px] hover:text-[#ffff] hover:bg-gradient border-4 border-[#008A7D] hover:border-0 hover:bg- transition-all duration-500 ease-linear ">
               Book a Free Consultation
