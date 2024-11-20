@@ -38,6 +38,10 @@ import ApplicationDevelopmentLowerIcon from './application development page/Lowe
 import LeaderShipPicture from './Leadership Team/Leadership team.jpg'
 import LeadershipTeamUpperIcon from './Leadership Team/Upper Icon.svg'
 import LeadershipTeamLowerIcon from './Leadership Team/Lower Icon.svg'
+import CEOPic1 from './Leadership Team/Team/Picture1.png'
+import CEOPic2 from './Leadership Team/Team/Picture2.png'
+import CEOPic3 from './Leadership Team/Team/Picture3.png'
+import LinkedinIcon from './Leadership Team/Team/Gif/linkedin.gif'
 
 
 export const images = {
@@ -80,5 +84,9 @@ export const images = {
     ApplicationDevelopmentLowerIcon,
     LeaderShipPicture,
     LeadershipTeamUpperIcon,
-    LeadershipTeamLowerIcon
+    LeadershipTeamLowerIcon,
+    CEOPic1,
+    CEOPic2,
+    CEOPic3,
+    LinkedinIcon
 }
