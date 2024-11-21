@@ -11,7 +11,7 @@ export default function NavBar() {
       type: "Dropdown",
       items: [
         { name: "About Us", Link: "/company/about-us" },
-        { name: "Leadership Team", Link: "/company/leadership-team" },
+        { name: "Our Team", Link: "/company/leadership-team" },
       ],
     },
     {
