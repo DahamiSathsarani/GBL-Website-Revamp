@@ -12,7 +12,7 @@ const ProductsSection = () => {
 
     
   return (
-    <div className="flex flex-col items-center justify-center w-full h-[100%] text-white">
+    <div className="flex flex-col items-center justify-center w-full h-[100%] text-white 2xl:mb-5">
             <div className='hidden xs:h-[10%] w-[67%] h-[25%] md:flex items-end mt-10'>
                 <img src={Line} alt='Line'></img>
             </div>

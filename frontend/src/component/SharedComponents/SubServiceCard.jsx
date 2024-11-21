@@ -5,7 +5,7 @@ const SubServiceCard = ({ icon, title, content }) => {
 
     return (
         <div className="flex flex-col justify-center items-center xs:h-[250px] h-[400px] md:h-[400px] lg:h-[420px] xl:h-[410px] 2xl:h-[350px] md:w-[400px] lg:w-[420px] xl:w-[410px] 2xl:w-[350px] text-white">
-            <div className={`flex flex-col justify-center items-center w-[90%] h-[90%] bg-sub-service-card bg-contain md:bg-cover bg-center transition-all duration-700 ease-in-out`}
+            <div className={`flex flex-col justify-center items-center w-[90%] h-[90%] bg-[#b0b0ea] opacity-50 rounded-br-[80px] rounded-tl-[80px] transition-all duration-700 ease-in-out`}
                  onMouseEnter={() => setIsHovered(true)}
                  onMouseLeave={() => setIsHovered(false)}
                  style={{

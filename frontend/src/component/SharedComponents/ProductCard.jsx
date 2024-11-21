@@ -3,7 +3,7 @@ import React from 'react';
 const ProductCard = ({ title, icon: Icon, content }) => {
     return (
         <div className="xs:h-[540px] h-[550px] md:h-[500px] flex flex-col justify-center items-center text-white">
-            <div className='relative xs:w-[80%] w-[60%] sm:w-[250px] md:w-[230px] lg:w-[250px] h-[370px] bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] rounded-t-full flex justify-center items-center'>
+            <div className='relative xs:w-[80%] w-[60%] sm:w-[250px] md:w-[230px] lg:w-[250px] 2xl:w-[300px] h-[370px] 2xl:h-[400px] bg-gradient-to-t from-[#00CEB1] to-[#1C3A7B] rounded-t-full flex justify-center items-center'>
                 <div className='xs:h-[70%] xs:w-[90%] w-[90%] h-[70%] text-center flex flex-col'>
                     <div className='w-full h-[20%] flex items-center justify-center'>
                         <h2 className='text-[20px] font-bold'> { title } </h2>
