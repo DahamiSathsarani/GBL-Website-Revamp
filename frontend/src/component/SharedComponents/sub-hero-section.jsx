@@ -34,7 +34,7 @@ const SubHeroSection = ({
               <img
                 src={picture}
                 alt=""
-                className="xs:h-[12rem] xs:w-[12rem] h-[14rem] w-[14rem] sm:h-[20rem] sm:w-[20rem] md:h-[24rem] md:w-[24rem] lg:h-[18rem] lg:w-[18rem] xl:h-[24rem] xl:w-[24rem] 2xl:h-[29rem] 2xl:w-[29rem] rounded-[50%] shadow-sm"
+                className="xs:h-[12rem] xs:w-[12rem] h-[14rem] w-[14rem] sm:h-[20rem] sm:w-[20rem] md:h-[24rem] md:w-[24rem] lg:h-[18rem] lg:w-[18rem] xl:h-[24rem] xl:w-[24rem] 2xl:h-[29rem] 2xl:w-[29rem] rounded-[50%] shadow-sm object-cover"
               />
             </div>
             <div className="h-[3.5rem] w-[3.5rem] sm:h-[4.5rem] sm:w-[4.5rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[4.5rem] xl:w-[4.5rem]  rounded-[50%] border-[3px] border-[#7091E6] flex justify-center items-center relative left-[14rem] xs:left-[12.5rem] xs:top-[-4.5rem] top-[-4.5rem] sm:left-[21rem] sm:top-[-8rem] md:left-[24rem] lg:top-[-6rem] lg:left-[18rem] xl:top-[-7rem] xl:left-[23rem] 2xl:top-[-6rem] 2xl:left-[25.5rem] bg-white">
