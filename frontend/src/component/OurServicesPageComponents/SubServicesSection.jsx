@@ -8,8 +8,8 @@ const SubServicesSection = ({ serviceKey }) => {
     const data = subServicesData[serviceKey] || [];
 
   return (
-    <section className='w-[100%] xs:h-[480px] h-[100vh] md:h-[100%] flex justify-center items-center bg-sub-services bg-cover bg-center sm:mt-5 lg:mt-2'>
-        <div className='flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-60 xl:py-5'>
+    <section className='w-[100%] xs:h-[480px] h-[100vh] md:h-[100%] flex justify-center items-center bg-cover bg-center sm:mt-5 lg:mt-2'>
+        <div className='flex flex-col items-center justify-center w-full h-full xl:py-5'>
 
             <motion.div className="z-10 hidden w-full gap-0 mx-auto xl:grid xl:grid-cols-3"
                 style={{ maxWidth: 'calc(100% - 80px)' }}  
