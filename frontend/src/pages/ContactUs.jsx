@@ -2,8 +2,18 @@ import { images } from "../assets/images/assestsImages";
 import MapAndFormSection from "../component/ContactUsPageComponents/mapAndFormSection";
 import MainLayout from "../component/SharedComponents/MainLayout";
 import SubHeroSection from "../component/SharedComponents/sub-hero-section";
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
+  const formRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToForm) {
+      formRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
   const descriptionElement = (
     <div className=" mx-[10%] lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:pl-[2rem] xl:pl-[3rem]">
       <h1 className="font-poppins  text-center sub-menu-gradient text-gradient  lg:text-left xs:text-[20px] text-[25px] xl:text-[30px] 2xl:[35px] mb-[1rem] ">
@@ -35,7 +45,7 @@ const ContactUs = () => {
     <div>
       <MainLayout>
         <SubHeroSection {...ContactUsSectionDescription} />
-        <MapAndFormSection />
+        <MapAndFormSection formRef={formRef} />
       </MainLayout>
     </div>
   );

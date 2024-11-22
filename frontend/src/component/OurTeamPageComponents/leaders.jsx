@@ -7,16 +7,19 @@ const Leaders = () => {
       img: images.CEOPic2,
       name: "Amila Vinod Gunasekara",
       Position: "Co-Founder/Director",
+      Link: "https://www.linkedin.com/in/amilagunasekara/",
     },
     {
       img: images.CEOPic1,
       name: "Hojitha Weerasinghe",
       Position: "Co-Founder/Director",
+      Link: "https://www.linkedin.com/in/hojitha-weerasinghe-502414101/",
     },
     {
       img: images.CEOPic3,
       name: "Danushka Pinto",
       Position: "Co-Founder/Director",
+      Link: "https://www.linkedin.com/in/dhanushka-pinto-72a77380/",
     },
   ];
   return (
@@ -52,7 +55,7 @@ const Leaders = () => {
             <div className="w-full h-[20%] flex flex-col items-center my-2">
               <h2 className="font-sans text-lg font-bold">{onePerson.name}</h2>
               <p className="text-[#4B4B4B]">{onePerson.Position}</p>
-              <a href="/">
+              <a href={onePerson.Link}>
                 <img
                   src={images.LinkedinIcon}
                   alt={onePerson.name}
