@@ -34,10 +34,10 @@ const HeroSection = () => {
           initial={{ x: "-50%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          class=" lg:relative  w-[100%]   text-center z-50   px-[10%] lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:w-[40%] xl:w-[35%] lg:text-left lg:h-[100vh] lg:flex  items-end pb-10"
+          class=" lg:relative  w-[100%]   text-center z-40   px-[10%] lg:px-0 lg:ml-[5rem] xl:ml-[6rem] 2xl:ml-[8rem] lg:w-[40%] xl:w-[35%] lg:text-left lg:h-[100vh] lg:flex  items-end pb-10"
         >
           <div>
-            <h1 class="mb-6 text-[28px] text-gradient font-bold sm:text-4xl md:text-4xl lg:text-[2.5rem]  xl:text-5xl  2xl:text-6xl  lg:pl-[2rem] xl:pl-[3rem] text-shadow-sm">
+            <h1 class="mb-6 text-[28px] text-gradient font-bold sm:text-4xl md:text-4xl lg:text-[2.5rem]  xl:text-3xl  2xl:text-5xl  lg:pl-[2rem] xl:pl-[3rem] text-shadow-sm">
               Unleashing <br></br> Innovation Through <br></br> Lines of Code
             </h1>
             <p class="mb-6 text-[15px] sm:text-[17px] md:text-[18px] text-[#7A7878]  lg:w-[100%]  2xl:w-[85%]  lg:pl-[2rem] xl:pl-[3rem]">

@@ -20,9 +20,8 @@ export default function Footer() {
       options: [
         {
           element: FaFacebookF,
-          Link: "https://web.facebook.com/people/Global-Bridge-Labs/61556574066229/?mibextid=ZbWKwL",
+          Link: "https://web.facebook.com/people/Global-Bridge-Labs/61556574066229/",
         },
-        { element: FaTwitter, Link: "/" },
         {
           element: FaLinkedinIn,
           Link: "https://www.linkedin.com/company/global-bridge-labs/",
@@ -39,8 +38,8 @@ export default function Footer() {
     },
   ];
   return (
-    <section className="w-full bg-[#11253D] font-sans">
-      <div className="px-10  sm:px-16 lg:px-20 xl:px-28 pt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between  w-full lg:flex-nowrap">
+    <section className="w-full bg-[#11253D] font-sans px-[10%] lg:px-[5rem] xl:px-[6rem] 2xl:px-[8rem]">
+      <div className=" pt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between  w-full lg:flex-nowrap">
         {footerOptions.map((unit) => (
           <div className="mb-8  sm:w-[16rem] md:w-[20rem] lg:w-auto lg:min-w-[12rem] xl:min-w-[14rem]">
             <div className="mb-3">
@@ -69,7 +68,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="mx-10 sm:mx-16 lg:mx-20 xl:mx-28  border-t-[1px] border-[#3D52A0] py-6 xl:py-8 flex justify-between ">
+      <div className=" border-t-[1px] border-[#3D52A0] py-6 xl:py-8 flex justify-between ">
         <img
           className="h-[3rem] sm:h-[4rem] xl:h-[5rem]"
           src={images.GBLLogo}
