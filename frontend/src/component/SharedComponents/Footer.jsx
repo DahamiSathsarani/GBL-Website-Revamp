@@ -18,9 +18,15 @@ export default function Footer() {
     {
       type: "Connect",
       options: [
-        { element: FaFacebookF, Link: "/" },
+        {
+          element: FaFacebookF,
+          Link: "https://web.facebook.com/people/Global-Bridge-Labs/61556574066229/?mibextid=ZbWKwL",
+        },
         { element: FaTwitter, Link: "/" },
-        { element: FaLinkedinIn, Link: "/" },
+        {
+          element: FaLinkedinIn,
+          Link: "https://www.linkedin.com/company/global-bridge-labs/",
+        },
       ],
     },
     {
