@@ -1,5 +1,4 @@
 import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { images } from "../../assets/images/assestsImages";
 
