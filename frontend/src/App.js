@@ -1,15 +1,12 @@
-import Clients from "./component/ourClientPage/clients/Clients";
-import Stats from "./component/ourClientPage/stats/Stats";
 import React from "react";
-import HeroSection from "./component/heroSection/HeroSection";
+import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Clients/>
-      <HeroSection/>
-    </div>
-  );
+    <AppRoutes/>  </div>
+  )
 }
 
 export default App;
+
