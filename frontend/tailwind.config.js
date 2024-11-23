@@ -12,6 +12,7 @@ module.exports = {
       backgroundImage: theme => ({
         'success-stories': "url('./assets/images/Background Picture.jpg')",
         'sub-services': "url('./assets/images/Service1Background.jpg')",
+        'sub-services-card': "url('./assets/images/Sub Services Card Shape.png')"
       }),
       textShadow: {
         'outline': '0 0 2px white',
