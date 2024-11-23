@@ -1,11 +1,9 @@
 import { useState } from "react";
-export default function MapAndFormSection({ formRef }) {
-  const [email, setEmail] = useState("");
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 emailjs.init("uENne41d2xJw4d1mb");
 
-export default function MapAndFormSection() {
+export default function MapAndFormSection({ formRef }) {
   const [error, setError] = useState("");
 
   const validateEmail = (email) => {
