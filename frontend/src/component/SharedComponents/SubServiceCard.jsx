@@ -13,7 +13,7 @@ const SubServiceCard = ({ icon, title, content }) => {
                  }}>
                 
                 <div className={`flex flex-col items-center justify-center xs:w-[120px] w-[220px] sm:w-[240px] md:w-[200px] xl:w-[250px] mt-2 transition-all duration-700 ease-in-out ${
-                     isHovered ? 'opacity-0 scale-90 h-0' : 'opacity-100 scale-100 h-[90%]'
+                     isHovered ? 'opacity-0 scale-50 h-0' : 'opacity-100 scale-100 h-[90%]'
                     }`}>
                     <div className="xs:w-[60px] xs:h-[60px] w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] xl:w-[120px] xl:h-[120px] rounded-full">
                         <img src={icon} alt={`${title} Icon`} className="rounded-full" />
