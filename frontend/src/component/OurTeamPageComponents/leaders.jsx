@@ -35,6 +35,7 @@ const Leaders = () => {
       </div>
       <img
         src={images.WaveImage}
+        alt="wave"
         className="w-full xs:h-[4rem] h-[5rem] lg:h-[8rem] mt-[2rem] lg:mb-[2rem]"
       />
       <div className="h-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between px-[10%] lg:px-[5rem] xl:px-[6rem] 2xl:px-[8rem] w-full">

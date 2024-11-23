@@ -4,6 +4,7 @@ import ProductCard from '../SharedComponents/ProductCard'
 import { productData } from '../../data/productData'
 import Carousel from '../SharedComponents/Carousel'
 import Line from '../../assets/images/Horizontal Line.png'
+import { images } from '../../assets/images/assestsImages'
 
 const ProductsSection = () => {
     const fisrt3Products = productData['fisrt3Products'] || [];
@@ -30,6 +31,12 @@ const ProductsSection = () => {
                     </div>
                 ))}
             </motion.div>
+
+            <img
+                src={images.WaveImage}
+                alt="wave"
+                className="w-[100%] xs:h-[4rem] h-[5rem] lg:h-[8rem] mt-[2rem] lg:mb-[2rem] hidden md:flex"
+            />
 
             <div className='hidden xs:h-[10%] w-[67%] h-[25%] md:flex items-end mt-20'>
                 <img src={Line} alt='Line'></img>
