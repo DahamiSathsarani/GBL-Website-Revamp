@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { images } from "../../assets/images/assestsImages";
 import { IoIosArrowDropleft } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function NavBar() {
   const navbarItems = [
     {
@@ -11,7 +12,7 @@ export default function NavBar() {
       type: "Dropdown",
       items: [
         { name: "About Us", Link: "/company/about-us" },
-        { name: "Leadership Team", Link: "/company/leadership-team" },
+        { name: "Our Team", Link: "/company/leadership-team" },
       ],
     },
     {
@@ -36,7 +37,11 @@ export default function NavBar() {
     setClickedOnSubMenuBar(isClickedOnSubMenuBar === index ? null : index);
     console.log(isClickedOnSubMenuBar);
   };
+  const navigate = useNavigate();
 
+  const handleConsultationClick = () => {
+    navigate("/contact-us", { state: { scrollToForm: true } });
+  };
   return (
     <section className="absolute z-50 w-full">
       <div className="flex items-center justify-between h-[3.5rem] sm:h-[4.5rem] md:h-[5rem] lg:h-[6rem] bg-[#ffffff] shadow-2xl mx-[10%] lg:mx-[5rem] xl:mx-[6rem] 2xl:mx-[8rem] rounded-[35px] px-[2rem] lg:px-[2rem] xl:px-[3rem] mt-5 lg:mt-10 ">
@@ -81,7 +86,10 @@ export default function NavBar() {
             )
           )}
         </ul>
-        <button className="hidden lg:flex font-sans font-bold text-[#ffffff] lg:text-[14px] xl:text-[16px] bg-gradient lg:h-[3rem] xl:h-[3.5rem] lg:w-[12rem] xl:w-[15rem]  items-center justify-center rounded-[20px] hover:text-gradient hover:border-4 hover:border-[#008A7D] hover:transition-all hover:duration-300 hover:ease-linear ">
+        <button
+          className="hidden lg:flex font-sans font-bold text-[#ffffff] lg:text-[14px] xl:text-[16px] bg-gradient lg:h-[3rem] xl:h-[3.5rem] lg:w-[12rem] xl:w-[15rem]  items-center justify-center rounded-[20px] hover:text-gradient hover:border-4 hover:border-[#008A7D] hover:transition-all hover:duration-300 hover:ease-linear "
+          onClick={handleConsultationClick}
+        >
           Book a Free Consultation
         </button>
         <FaBars

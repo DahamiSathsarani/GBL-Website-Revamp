@@ -1,4 +1,6 @@
 import { useState } from "react";
+export default function MapAndFormSection({ formRef }) {
+  const [email, setEmail] = useState("");
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 emailjs.init("uENne41d2xJw4d1mb");
@@ -81,7 +83,10 @@ export default function MapAndFormSection() {
   
 
   return (
-    <section className="mx-[10%] lg:mx-[7rem] xl:mx-[9rem] 2xl:mx-[11rem] xs:mt-0 mt-[2rem] sm:mt-[3rem] lg:mt-[5rem] xs:mb-[3rem] mb-[4rem] bg-[#E7E6E9]  ">
+    <section
+      ref={formRef}
+      className="mx-[10%] lg:mx-[7rem] xl:mx-[9rem] 2xl:mx-[11rem] xs:mt-0 mt-[2rem] sm:mt-[3rem] lg:mt-[5rem] xs:mb-[3rem] mb-[4rem] bg-[#E7E6E9]  "
+    >
       <div>
         <iframe 
           title="map"
