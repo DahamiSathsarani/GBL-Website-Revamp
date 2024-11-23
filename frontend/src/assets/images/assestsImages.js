@@ -1,5 +1,5 @@
 import HeroPicture from './Hero Picture.png'
-import HeroPictureMobileView from './Hero Picture Mobile .png'
+import HeroPictureMobileView from './Hero Picture Mobile View.svg'
 import BackgroundImage from './Background Picture.jpg'
 import DirectorImage from './Director Picture.jpg'
 import GBLLogo from "./GBL Logo.png";
